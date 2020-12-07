@@ -1594,6 +1594,30 @@
                 line-height: 18px;
                 min-height: 38px;
               }
+
+              .card-field{
+                height: 2.8em;
+                top: 0px !important;
+                left: 0px !important;
+                margin: 0px !important;
+                width: 100% !important;
+                background: transparent !important;
+                font-size: 16px !important;
+              }
+
+              .card-field:focus{
+                outline:0;
+                outline-offset:0;
+                box-shadow:0 0 0 1px #76a2e4 inset;
+                border-color:#76a2e4;
+              }
+
+              .StripeElement:focus{
+                outline:0;
+                outline-offset:0;
+                box-shadow:0 0 0 1px #76a2e4 inset;
+                border-color:#76a2e4;
+              }
             </style>
             <script>
               //jQuery(document).ready( function($) {
@@ -4427,7 +4451,7 @@
                                         <label class="d-inline-table text-middle mx-2 cursor-pointer text-color">
                                           <div class="d-table-cell pr-2">
                                             <div class="icon-slot icon-slot-20">
-                                              <input name="tributeType" type="radio" id="honor-radio" name="honor-memory-radio" value="honor" class="p-abs top-left bottom-right z-index-2 control-next-focus-shadow" style="height: 1.5em; border: 0px; width: 100%;"> 
+                                              <input name="tributeType" type="radio" id="honor-radio" name="honor-memory-radio" checked value="honor" class="p-abs top-left bottom-right z-index-2 control-next-focus-shadow" style="height: 1.5em; border: 0px; width: 100%;"> 
                                               <div aria-hidden="true" class="p-abs centered z-index-1 control-next-focus-shadow-el border-radius-10">
                                                 <div class="group-shadow-radio">
                                                   {% comment %} <svg svg-inline="" focusable="false" role="presentation" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block"><path d="M19 10a9 9 0 1 0-18 0 9 9 0 0 0 18 0z" fill="#fff" stroke="#5491EB" stroke-width="2"></path><path d="M16 10a6 6 0 1 0-12 0 6 6 0 0 0 12 0z" fill="#5491EB"></path></svg> 
@@ -4604,7 +4628,7 @@
                                             </div>
                                           </div>
                                           <div class="mt-3 px-1 w-100">
-                                            <button qa="cc-button" class="btn btn-primary">
+                                            <button qa="cc-button" class="btn btn-primary" onclick="openCreditCard()">
                                               <div class="d-table w-100">
                                                 <div class="d-table-cell text-middle text-center btn-cell px-1">
                                                   <span class="icon-slot d-inline-block mr-2" style="width: 24px;">
@@ -4762,13 +4786,13 @@
                                 </div>
                               </div>
                             </div>
-                            <div qa="inactive-screen-credit-card" class="workflow-slide workflow-view" style="display: none;">
+                            <div qa="inactive-screen-credit-card" id="credit-card-tab" class="workflow-slide workflow-view hidden">
                               <form aria-labelledby="v-1606490040550-description" aria-describedby="v-1606490040550-description" class="page">
                                 <div class="header-row">
                                   <div class="d-table-cell text-top">
                                     <div class="header d-table w-100">
                                       <div class="d-table-cell text-top p-3">
-                                        <div class="header-btn-icon-empty"></div>
+                                        <a role="button" tabindex="0" aria-label="Back" onclick="openPaymentMethod()" class="header-btn-icon cursor-pointer d-table focus-shadow"><span aria-hidden="true" class="d-table-cell text-middle text-center font-size-24"><svg svg-inline="" focusable="false" role="presentation" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block mx-auto icon-stroke"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
                                       </div> 
                                       <div class="header-center d-table-cell w-100 text-center text-middle">
                                         <div role="heading" aria-level="2" class="header-title">
@@ -4803,11 +4827,8 @@
                                               <div id="popover-card-number" class="group group-shadow mb-2">
                                                 <div class="group-feedback-right">
                                                   <label for="v-1606490040554-cardNumber" class="sr-only">Сard Number</label> 
-                                                  <div id="card-number" class="StripeElement empty">
-                                                    <div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;">
-                                                      <iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame7715" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-060dea0bf366ce25d99b48708708a855.html#showIcon=true&amp;style[base][color]=%23515151&amp;style[base][fontWeight]=400&amp;style[base][fontFamily]='IBM+Plex+Sans'%2C+sans-serif&amp;style[base][fontSize]=15px&amp;style[base][lineHeight]=21px&amp;style[base][fontSmoothing]=antialiased&amp;style[base][:focus][color]=%23515151&amp;style[base][::placeholder][color]=%23757575&amp;style[base][:focus::placeholder][color]=%23757575&amp;style[invalid][color]=%23EA0005&amp;style[invalid][:focus][color]=%23EA0005&amp;style[invalid][::placeholder][color]=%23757575&amp;iconStyle=default&amp;placeholder=Card+Number&amp;wait=true&amp;rtl=false&amp;componentName=cardNumber&amp;keyMode=live&amp;apiKey=pk_live_9RzCojmneCvL31GhYTknluXp&amp;origin=http%3A%2F%2F127.0.0.1%3A8000&amp;referrer=http%3A%2F%2F127.0.0.1%3A8000%2Fdonate&amp;controllerId=__privateStripeController7711" title="Secure card number input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; transform: translateZ(0px) !important; height: 21px;"></iframe>
-                                                      <input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;">
-                                                    </div>
+                                                  <div class="StripeElement">
+                                                    <input class="card card-field" id="card-number" placeholder="Card Number" type="text" aria-hidden="true" aria-label=" " style="position: absolute !important;" autocomplete="false">
                                                   </div>
                                                 </div>
                                               </div> 
@@ -4817,11 +4838,8 @@
                                                     <div class="pr-1">
                                                       <div class="group group-shadow">
                                                         <label for="v-1606490040554-expireDate" class="sr-only">Expire Date</label> 
-                                                        <div class="StripeElement empty">
-                                                          <div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;">
-                                                            <iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame7716" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-060dea0bf366ce25d99b48708708a855.html#style[base][color]=%23515151&amp;style[base][fontWeight]=400&amp;style[base][fontFamily]='IBM+Plex+Sans'%2C+sans-serif&amp;style[base][fontSize]=15px&amp;style[base][lineHeight]=21px&amp;style[base][fontSmoothing]=antialiased&amp;style[base][:focus][color]=%23515151&amp;style[base][::placeholder][color]=%23757575&amp;style[base][:focus::placeholder][color]=%23757575&amp;style[invalid][color]=%23EA0005&amp;style[invalid][:focus][color]=%23EA0005&amp;style[invalid][::placeholder][color]=%23757575&amp;wait=true&amp;rtl=false&amp;componentName=cardExpiry&amp;keyMode=live&amp;apiKey=pk_live_9RzCojmneCvL31GhYTknluXp&amp;origin=http%3A%2F%2F127.0.0.1%3A8000&amp;referrer=http%3A%2F%2F127.0.0.1%3A8000%2Fdonate&amp;controllerId=__privateStripeController7711" title="Secure expiration date input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; transform: translateZ(0px) !important; height: 21px;"></iframe>
-                                                            <input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;">
-                                                          </div>
+                                                        <div class="StripeElement" style="padding: 0;">
+                                                          <input class="card card-field" placeholder="MM / YY" id="card-end-date" type="text" aria-hidden="true" aria-label=" " autocomplete="false">
                                                         </div>
                                                       </div>
                                                     </div>
@@ -4831,11 +4849,8 @@
                                                       <div class="pl-1">
                                                         <div class="group group-shadow">
                                                           <label for="v-1606490040554-cvv" class="sr-only">CVC</label> 
-                                                          <div qa="card-cvv" class="StripeElement empty">
-                                                            <div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;">
-                                                              <iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame7717" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-060dea0bf366ce25d99b48708708a855.html#style[base][color]=%23515151&amp;style[base][fontWeight]=400&amp;style[base][fontFamily]='IBM+Plex+Sans'%2C+sans-serif&amp;style[base][fontSize]=15px&amp;style[base][lineHeight]=21px&amp;style[base][fontSmoothing]=antialiased&amp;style[base][:focus][color]=%23515151&amp;style[base][::placeholder][color]=%23757575&amp;style[base][:focus::placeholder][color]=%23757575&amp;style[invalid][color]=%23EA0005&amp;style[invalid][:focus][color]=%23EA0005&amp;style[invalid][::placeholder][color]=%23757575&amp;wait=true&amp;rtl=false&amp;componentName=cardCvc&amp;keyMode=live&amp;apiKey=pk_live_9RzCojmneCvL31GhYTknluXp&amp;origin=http%3A%2F%2F127.0.0.1%3A8000&amp;referrer=http%3A%2F%2F127.0.0.1%3A8000%2Fdonate&amp;controllerId=__privateStripeController7711" title="Secure CVC input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; transform: translateZ(0px) !important; height: 21px;"></iframe>
-                                                              <input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;">
-                                                            </div>
+                                                          <div qa="card-cvv" class="StripeElement empty" style="padding: 0;">
+                                                              <input class="card card-field" placeholder="CVC" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="3">
                                                           </div>
                                                         </div>
                                                       </div>
@@ -4871,7 +4886,10 @@
                                             </div>
                                           </div>
                                         </form> 
-                                        <div tabindex="0" id="cvc-help" role="button" aria-label="Help" aria-describedby="false" class="p-abs cursor-pointer text-primary hidden-tablet z-index-5 focus-shadow border-top-right-radius-3 border-bottom-right-radius-3" style="top: 77px; right: 39px; width: 41px; height: 41px;"><span class="sprite sprite-help d-block p-abs centered"></span> <span aria-owns="cvc-help-description"></span></div> 
+                                        <div tabindex="0" id="cvc-help" role="button" aria-label="Help" aria-describedby="false" class="p-abs cursor-pointer text-primary hidden-tablet z-index-5 focus-shadow border-top-right-radius-3 border-bottom-right-radius-3" style="top: 67px; right: 39px; width: 41px; height: 41px;">
+                                          <span class="sprite sprite-help d-block p-abs centered" data-toggle="popover" data-content="For Mastercard or Visa it is the last three digits in the signature area on the back of your card. For American Express is the four digits in the front of the card"></span> 
+                                          <span aria-owns="cvc-help-description"></span>
+                                        </div> 
                                       </div> 
                                       <div aria-owns="v-1606490040550-footer"></div>
                                     </fieldset>
@@ -4886,6 +4904,582 @@
                                         <div class="d-table w-100 btn-donate-label font-size-17">
                                           <div class="d-table-cell text-middle text-center btn-cell">
                                             <span>Donate $0</span>
+                                          </div>
+                                        </div> 
+                                        <span class="animated-progress"></span> 
+                                        <div class="done-mark">
+                                          <div class="d-table w-100">
+                                            <div class="d-table-cell text-middle text-center btn-cell">
+                                              <svg svg-inline="" focusable="false" role="presentation" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block mx-auto"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.931 14.843L20.945 5.07a2.818 2.818 0 0 1 3.952.407 2.819 2.819 0 0 1-.405 3.954l-14.139 11.5a2.794 2.794 0 0 1-1.825.625 2.807 2.807 0 0 1-2.22-1.033l-5.207-6.4a2.818 2.818 0 0 1 .408-3.952v-.001a2.818 2.818 0 0 1 3.952.407l3.47 4.266z" fill="#fff"></path></svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </button> 
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div qa="active-screen-privacy" id="privacy-tab" class="workflow-slide workflow-view hidden">
+                              <form class="page">
+                                <div class="header-row">
+                                  <div class="d-table-cell text-top">
+                                    <div class="header d-table w-100">
+                                      <div class="d-table-cell text-top p-3">
+                                        <a role="button" tabindex="0" aria-label="Back" class="header-btn-icon cursor-pointer d-table focus-shadow">
+                                          <span aria-hidden="true" class="d-table-cell text-middle text-center font-size-24">
+                                            <svg svg-inline="" focusable="false" role="presentation" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block mx-auto icon-stroke"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                          </span>
+                                        </a>
+                                      </div> 
+                                      <div class="header-center d-table-cell w-100 text-center text-middle">
+                                        <div role="heading" aria-level="2" class="header-title">
+                                          <span id="v-1607091414807-title">Personal Information</span>
+                                        </div>
+                                      </div> 
+                                      <div class="d-table-cell text-top p-3">
+                                        <div class="header-btn-icon-empty"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> 
+                                <div class="content-row">
+                                  <div role="form" aria-labelledby="v-1607091414807-legend" aria-describedby="v-1607091414807-description" class="d-table-cell text-top">
+                                    <fieldset aria-labelledby="v-1607091414807-title"><legend id="v-1607091414807-legend" aria-owns="v-1607091414807-title" class="sr-only"></legend> <!----> 
+                                      <div class="pt-6 px-body">
+                                        <div id="v-1607091414807-description" class="text-center mb-3">Please tell us your name and where we can send your donation receipt.</div> 
+                                        <div class="group-shadow group-stacked-vertical mb-3">
+                                          <div class="group" style="margin-bottom: -1px;">
+                                            <label for="v-1607091414807-firstName" class="sr-only"> First Name</label> 
+                                            <input type="text" name="firstName" id="v-1607091414807-firstName" data-vv-name="firstName" data-vv-as="First Name" placeholder="First Name" autocomplete="given-name" qa="personal-first-name" maxlength="40" class="control control-no-bottom-radius" aria-required="true" aria-invalid="true">
+                                          </div> 
+                                          <div class="group">
+                                            <label for="v-1607091414807-lastName" class="sr-only">Last Name</label> 
+                                            <input type="text" name="lastName" id="v-1607091414807-lastName" data-vv-name="lastName" data-vv-as="Last Name" placeholder="Last Name" autocomplete="family-name" qa="personal-last-name" maxlength="40" class="control control-no-top-radius" aria-required="true" aria-invalid="true">
+                                          </div>
+                                        </div> 
+                                        <div class="group-shadow mt-2 mb-4 group-stacked-vertical">
+                                          <div class="group" style="margin-bottom: -1px;">
+                                            <label for="v-1607091414807-email" class="sr-only">Email Address</label> 
+                                            <input type="email" id="v-1607091414807-email" inputmode="email" name="email" data-vv-name="email" data-vv-as="Email Address" placeholder="Email Address" autocomplete="email" qa="personal-email" class="control control-no-bottom-radius" aria-required="true" aria-invalid="true">
+                                          </div> 
+                                          <div class="group">
+                                            <label for="v-1607091414807-phone" class="sr-only">Phone Number (optional)</label> 
+                                            <div class="p-rel focus-shadow vue-tel-input" data-vv-as="Phone Number (optional)">
+                                              <div tabindex="0" class="vti__dropdown">
+                                                <span class="vti__selection">
+                                                  <div class="vti__flag ve"></div> <!----> 
+                                                  <svg svg-inline="" focusable="false" role="presentation" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block" style="margin-left: 3px;"><path d="M3.5 5.25L7 8.75l3.5-3.5" stroke="#6C6D6F" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                                </span> 
+                                                <ul class="vti__dropdown-list below" style="display: none;">
+                                                  <li class="vti__dropdown-item">
+                                                    <div class="vti__flag af"></div> <strong>Afghanistan (‫افغانستان‬‎)</strong> <span>
+                                                    +93
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag al"></div> <strong>Albania (Shqipëri)</strong> <span>
+                                                    +355
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag dz"></div> <strong>Algeria (‫الجزائر‬‎)</strong> <span>
+                                                    +213
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag as"></div> <strong>American Samoa</strong> <span>
+                                                    +1684
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ad"></div> <strong>Andorra</strong> <span>
+                                                    +376
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ao"></div> <strong>Angola</strong> <span>
+                                                    +244
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ai"></div> <strong>Anguilla</strong> <span>
+                                                    +1264
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ag"></div> <strong>Antigua and Barbuda</strong> <span>
+                                                    +1268
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ar"></div> <strong>Argentina</strong> <span>
+                                                    +54
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag am"></div> <strong>Armenia (Հայաստան)</strong> <span>
+                                                    +374
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag aw"></div> <strong>Aruba</strong> <span>
+                                                    +297
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag au"></div> <strong>Australia</strong> <span>
+                                                    +61
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag at"></div> <strong>Austria (Österreich)</strong> <span>
+                                                    +43
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag az"></div> <strong>Azerbaijan (Azərbaycan)</strong> <span>
+                                                    +994
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bs"></div> <strong>Bahamas</strong> <span>
+                                                    +1242
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bh"></div> <strong>Bahrain (‫البحرين‬‎)</strong> <span>
+                                                    +973
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bd"></div> <strong>Bangladesh (বাংলাদেশ)</strong> <span>
+                                                    +880
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bb"></div> <strong>Barbados</strong> <span>
+                                                    +1246
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag by"></div> <strong>Belarus (Беларусь)</strong> <span>
+                                                    +375
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag be"></div> <strong>Belgium (België)</strong> <span>
+                                                    +32
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bz"></div> <strong>Belize</strong> <span>
+                                                    +501
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bj"></div> <strong>Benin (Bénin)</strong> <span>
+                                                    +229
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bm"></div> <strong>Bermuda</strong> <span>
+                                                    +1441
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bt"></div> <strong>Bhutan (འབྲུག)</strong> <span>
+                                                    +975
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bo"></div> <strong>Bolivia</strong> <span>
+                                                    +591
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ba"></div> <strong>Bosnia and Herzegovina (Босна и Херцеговина)</strong> <span>
+                                                    +387
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bw"></div> <strong>Botswana</strong> <span>
+                                                    +267
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag br"></div> <strong>Brazil (Brasil)</strong> <span>
+                                                    +55
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag io"></div> <strong>British Indian Ocean Territory</strong> <span>
+                                                    +246
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag vg"></div> <strong>British Virgin Islands</strong> <span>
+                                                    +1284
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bn"></div> <strong>Brunei</strong> <span>
+                                                    +673
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bg"></div> <strong>Bulgaria (България)</strong> <span>
+                                                    +359
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bf"></div> <strong>Burkina Faso</strong> <span>
+                                                    +226
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bi"></div> <strong>Burundi (Uburundi)</strong> <span>
+                                                    +257
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag kh"></div> <strong>Cambodia (កម្ពុជា)</strong> <span>
+                                                    +855
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cm"></div> <strong>Cameroon (Cameroun)</strong> <span>
+                                                    +237
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ca"></div> <strong>Canada</strong> <span>
+                                                    +1
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cv"></div> <strong>Cape Verde (Kabu Verdi)</strong> <span>
+                                                    +238
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bq"></div> <strong>Caribbean Netherlands</strong> <span>
+                                                    +599
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ky"></div> <strong>Cayman Islands</strong> <span>
+                                                    +1345
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cf"></div> <strong>Central African Republic (République centrafricaine)</strong> <span>
+                                                    +236
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag td"></div> <strong>Chad (Tchad)</strong> <span>
+                                                    +235
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cl"></div> <strong>Chile</strong> <span>
+                                                    +56
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cn"></div> <strong>China (中国)</strong> <span>
+                                                    +86
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cx"></div> <strong>Christmas Island</strong> <span>
+                                                    +61
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cc"></div> <strong>Cocos (Keeling) Islands</strong> <span>
+                                                    +61
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag co"></div> <strong>Colombia</strong> <span>
+                                                    +57
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag km"></div> <strong>Comoros (‫جزر القمر‬‎)</strong> <span>
+                                                    +269
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cd"></div> <strong>Congo (DRC) (Jamhuri ya Kidemokrasia ya Kongo)</strong> <span>
+                                                    +243
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cg"></div> <strong>Congo (Republic) (Congo-Brazzaville)</strong> <span>
+                                                    +242
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ck"></div> <strong>Cook Islands</strong> <span>
+                                                    +682
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cr"></div> <strong>Costa Rica</strong> <span>
+                                                    +506
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ci"></div> <strong>Côte d’Ivoire</strong> <span>
+                                                    +225
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag hr"></div> <strong>Croatia (Hrvatska)</strong> <span>
+                                                    +385
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cu"></div> <strong>Cuba</strong> <span>
+                                                    +53
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cw"></div> <strong>Curaçao</strong> <span>
+                                                    +599
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cy"></div> <strong>Cyprus (Κύπρος)</strong> <span>
+                                                    +357
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag cz"></div> <strong>Czech Republic (Česká republika)</strong> <span>
+                                                    +420
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag dk"></div> <strong>Denmark (Danmark)</strong> <span>
+                                                    +45
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag dj"></div> <strong>Djibouti</strong> <span>
+                                                    +253
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag dm"></div> <strong>Dominica</strong> <span>
+                                                    +1767
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag do"></div> <strong>Dominican Republic (República Dominicana)</strong> <span>
+                                                    +1
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ec"></div> <strong>Ecuador</strong> <span>
+                                                    +593
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag eg"></div> <strong>Egypt (‫مصر‬‎)</strong> <span>
+                                                    +20
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sv"></div> <strong>El Salvador</strong> <span>
+                                                    +503
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gq"></div> <strong>Equatorial Guinea (Guinea Ecuatorial)</strong> <span>
+                                                    +240
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag er"></div> <strong>Eritrea</strong> <span>
+                                                    +291
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ee"></div> <strong>Estonia (Eesti)</strong> <span>
+                                                    +372
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag et"></div> <strong>Ethiopia</strong> <span>
+                                                    +251
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag fk"></div> <strong>Falkland Islands (Islas Malvinas)</strong> <span>
+                                                    +500
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag fo"></div> <strong>Faroe Islands (Føroyar)</strong> <span>
+                                                    +298
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag fj"></div> <strong>Fiji</strong> <span>
+                                                    +679
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag fi"></div> <strong>Finland (Suomi)</strong> <span>
+                                                    +358
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag fr"></div> <strong>France</strong> <span>
+                                                    +33
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gf"></div> <strong>French Guiana (Guyane française)</strong> <span>
+                                                    +594
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag pf"></div> <strong>French Polynesia (Polynésie française)</strong> <span>
+                                                    +689
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ga"></div> <strong>Gabon</strong> <span>
+                                                    +241
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gm"></div> <strong>Gambia</strong> <span>
+                                                    +220
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ge"></div> <strong>Georgia (საქართველო)</strong> <span>
+                                                    +995
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag de"></div> <strong>Germany (Deutschland)</strong> <span>
+                                                    +49
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gh"></div> <strong>Ghana (Gaana)</strong> <span>
+                                                    +233
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gi"></div> <strong>Gibraltar</strong> <span>
+                                                    +350
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gr"></div> <strong>Greece (Ελλάδα)</strong> <span>
+                                                    +30
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gl"></div> <strong>Greenland (Kalaallit Nunaat)</strong> <span>
+                                                    +299
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gd"></div> <strong>Grenada</strong> <span>
+                                                    +1473
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gp"></div> <strong>Guadeloupe</strong> <span>
+                                                    +590
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gu"></div> <strong>Guam</strong> <span>
+                                                    +1671
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gt"></div> <strong>Guatemala</strong> <span>
+                                                    +502
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gg"></div> <strong>Guernsey</strong> <span>
+                                                    +44
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gn"></div> <strong>Guinea (Guinée)</strong> <span>
+                                                    +224
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gw"></div> <strong>Guinea-Bissau (Guiné Bissau)</strong> <span>
+                                                    +245
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gy"></div> <strong>Guyana</strong> <span>
+                                                    +592
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ht"></div> <strong>Haiti</strong> <span>
+                                                    +509
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag hn"></div> <strong>Honduras</strong> <span>
+                                                    +504
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag hk"></div> <strong>Hong Kong (香港)</strong> <span>
+                                                    +852
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag hu"></div> <strong>Hungary (Magyarország)</strong> <span>
+                                                    +36
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag is"></div> <strong>Iceland (Ísland)</strong> <span>
+                                                    +354
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag in"></div> <strong>India (भारत)</strong> <span>
+                                                    +91
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag id"></div> <strong>Indonesia</strong> <span>
+                                                    +62
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ir"></div> <strong>Iran (‫ایران‬‎)</strong> <span>
+                                                    +98
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag iq"></div> <strong>Iraq (‫العراق‬‎)</strong> <span>
+                                                    +964
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ie"></div> <strong>Ireland</strong> <span>
+                                                    +353
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag im"></div> <strong>Isle of Man</strong> <span>
+                                                    +44
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag il"></div> <strong>Israel (‫ישראל‬‎)</strong> <span>
+                                                    +972
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag it"></div> <strong>Italy (Italia)</strong> <span>
+                                                    +39
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag jm"></div> <strong>Jamaica</strong> <span>
+                                                    +1876
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag jp"></div> <strong>Japan (日本)</strong> <span>
+                                                    +81
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag je"></div> <strong>Jersey</strong> <span>
+                                                    +44
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag jo"></div> <strong>Jordan (‫الأردن‬‎)</strong> <span>
+                                                    +962
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag kz"></div> <strong>Kazakhstan (Казахстан)</strong> <span>
+                                                    +7
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ke"></div> <strong>Kenya</strong> <span>
+                                                    +254
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ki"></div> <strong>Kiribati</strong> <span>
+                                                    +686
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag xk"></div> <strong>Kosovo</strong> <span>
+                                                    +383
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag kw"></div> <strong>Kuwait (‫الكويت‬‎)</strong> <span>
+                                                    +965
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag kg"></div> <strong>Kyrgyzstan (Кыргызстан)</strong> <span>
+                                                    +996
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag la"></div> <strong>Laos (ລາວ)</strong> <span>
+                                                    +856
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag lv"></div> <strong>Latvia (Latvija)</strong> <span>
+                                                    +371
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag lb"></div> <strong>Lebanon (‫لبنان‬‎)</strong> <span>
+                                                    +961
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ls"></div> <strong>Lesotho</strong> <span>
+                                                    +266
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag lr"></div> <strong>Liberia</strong> <span>
+                                                    +231
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ly"></div> <strong>Libya (‫ليبيا‬‎)</strong> <span>
+                                                    +218
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag li"></div> <strong>Liechtenstein</strong> <span>
+                                                    +423
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag lt"></div> <strong>Lithuania (Lietuva)</strong> <span>
+                                                    +370
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag lu"></div> <strong>Luxembourg</strong> <span>
+                                                    +352
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mo"></div> <strong>Macau (澳門)</strong> <span>
+                                                    +853
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mk"></div> <strong>Macedonia (FYROM) (Македонија)</strong> <span>
+                                                    +389
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mg"></div> <strong>Madagascar (Madagasikara)</strong> <span>
+                                                    +261
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mw"></div> <strong>Malawi</strong> <span>
+                                                    +265
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag my"></div> <strong>Malaysia</strong> <span>
+                                                    +60
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mv"></div> <strong>Maldives</strong> <span>
+                                                    +960
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ml"></div> <strong>Mali</strong> <span>
+                                                    +223
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mt"></div> <strong>Malta</strong> <span>
+                                                    +356
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mh"></div> <strong>Marshall Islands</strong> <span>
+                                                    +692
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mq"></div> <strong>Martinique</strong> <span>
+                                                    +596
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mr"></div> <strong>Mauritania (‫موريتانيا‬‎)</strong> <span>
+                                                    +222
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mu"></div> <strong>Mauritius (Moris)</strong> <span>
+                                                    +230
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag yt"></div> <strong>Mayotte</strong> <span>
+                                                    +262
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mx"></div> <strong>Mexico (México)</strong> <span>
+                                                    +52
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag fm"></div> <strong>Micronesia</strong> <span>
+                                                    +691
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag md"></div> <strong>Moldova (Republica Moldova)</strong> <span>
+                                                    +373
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mc"></div> <strong>Monaco</strong> <span>
+                                                    +377
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mn"></div> <strong>Mongolia (Монгол)</strong> <span>
+                                                    +976
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag me"></div> <strong>Montenegro (Crna Gora)</strong> <span>
+                                                    +382
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ms"></div> <strong>Montserrat</strong> <span>
+                                                    +1664
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ma"></div> <strong>Morocco (‫المغرب‬‎)</strong> <span>
+                                                    +212
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mz"></div> <strong>Mozambique (Moçambique)</strong> <span>
+                                                    +258
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mm"></div> <strong>Myanmar (Burma) (မြန်မာ)</strong> <span>
+                                                    +95
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag na"></div> <strong>Namibia (Namibië)</strong> <span>
+                                                    +264
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag nr"></div> <strong>Nauru</strong> <span>
+                                                    +674
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag np"></div> <strong>Nepal (नेपाल)</strong> <span>
+                                                    +977
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag nl"></div> <strong>Netherlands (Nederland)</strong> <span>
+                                                    +31
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag nc"></div> <strong>New Caledonia (Nouvelle-Calédonie)</strong> <span>
+                                                    +687
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag nz"></div> <strong>New Zealand</strong> <span>
+                                                    +64
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ni"></div> <strong>Nicaragua</strong> <span>
+                                                    +505
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ne"></div> <strong>Niger (Nijar)</strong> <span>
+                                                    +227
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ng"></div> <strong>Nigeria</strong> <span>
+                                                    +234
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag nu"></div> <strong>Niue</strong> <span>
+                                                    +683
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag nf"></div> <strong>Norfolk Island</strong> <span>
+                                                    +672
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag kp"></div> <strong>North Korea (조선 민주주의 인민 공화국)</strong> <span>
+                                                    +850
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mp"></div> <strong>Northern Mariana Islands</strong> <span>
+                                                    +1670
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag no"></div> <strong>Norway (Norge)</strong> <span>
+                                                    +47
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag om"></div> <strong>Oman (‫عُمان‬‎)</strong> <span>
+                                                    +968
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag pk"></div> <strong>Pakistan (‫پاکستان‬‎)</strong> <span>
+                                                    +92
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag pw"></div> <strong>Palau</strong> <span>
+                                                    +680
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ps"></div> <strong>Palestine (‫فلسطين‬‎)</strong> <span>
+                                                    +970
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag pa"></div> <strong>Panama (Panamá)</strong> <span>
+                                                    +507
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag pg"></div> <strong>Papua New Guinea</strong> <span>
+                                                    +675
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag py"></div> <strong>Paraguay</strong> <span>
+                                                    +595
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag pe"></div> <strong>Peru (Perú)</strong> <span>
+                                                    +51
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ph"></div> <strong>Philippines</strong> <span>
+                                                    +63
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag pl"></div> <strong>Poland (Polska)</strong> <span>
+                                                    +48
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag pt"></div> <strong>Portugal</strong> <span>
+                                                    +351
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag pr"></div> <strong>Puerto Rico</strong> <span>
+                                                    +1
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag qa"></div> <strong>Qatar (‫قطر‬‎)</strong> <span>
+                                                    +974
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag re"></div> <strong>Réunion (La Réunion)</strong> <span>
+                                                    +262
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ro"></div> <strong>Romania (România)</strong> <span>
+                                                    +40
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ru"></div> <strong>Russia (Россия)</strong> <span>
+                                                    +7
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag rw"></div> <strong>Rwanda</strong> <span>
+                                                    +250
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag bl"></div> <strong>Saint Barthélemy</strong> <span>
+                                                    +590
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sh"></div> <strong>Saint Helena</strong> <span>
+                                                    +290
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag kn"></div> <strong>Saint Kitts and Nevis</strong> <span>
+                                                    +1869
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag lc"></div> <strong>Saint Lucia</strong> <span>
+                                                    +1758
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag mf"></div> <strong>Saint Martin (Saint-Martin (partie française))</strong> <span>
+                                                    +590
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag pm"></div> <strong>Saint Pierre and Miquelon (Saint-Pierre-et-Miquelon)</strong> <span>
+                                                    +508
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag vc"></div> <strong>Saint Vincent and the Grenadines</strong> <span>
+                                                    +1784
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ws"></div> <strong>Samoa</strong> <span>
+                                                    +685
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sm"></div> <strong>San Marino</strong> <span>
+                                                    +378
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag st"></div> <strong>São Tomé and Príncipe (São Tomé e Príncipe)</strong> <span>
+                                                    +239
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sa"></div> <strong>Saudi Arabia (‫المملكة العربية السعودية‬‎)</strong> <span>
+                                                    +966
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sn"></div> <strong>Senegal (Sénégal)</strong> <span>
+                                                    +221
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag rs"></div> <strong>Serbia (Србија)</strong> <span>
+                                                    +381
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sc"></div> <strong>Seychelles</strong> <span>
+                                                    +248
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sl"></div> <strong>Sierra Leone</strong> <span>
+                                                    +232
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sg"></div> <strong>Singapore</strong> <span>
+                                                    +65
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sx"></div> <strong>Sint Maarten</strong> <span>
+                                                    +1721
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sk"></div> <strong>Slovakia (Slovensko)</strong> <span>
+                                                    +421
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag si"></div> <strong>Slovenia (Slovenija)</strong> <span>
+                                                    +386
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sb"></div> <strong>Solomon Islands</strong> <span>
+                                                    +677
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag so"></div> <strong>Somalia (Soomaaliya)</strong> <span>
+                                                    +252
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag za"></div> <strong>South Africa</strong> <span>
+                                                    +27
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag kr"></div> <strong>South Korea (대한민국)</strong> <span>
+                                                    +82
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ss"></div> <strong>South Sudan (‫جنوب السودان‬‎)</strong> <span>
+                                                    +211
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag es"></div> <strong>Spain (España)</strong> <span>
+                                                    +34
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag lk"></div> <strong>Sri Lanka (ශ්‍රී ලංකාව)</strong> <span>
+                                                    +94
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sd"></div> <strong>Sudan (‫السودان‬‎)</strong> <span>
+                                                    +249
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sr"></div> <strong>Suriname</strong> <span>
+                                                    +597
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sj"></div> <strong>Svalbard and Jan Mayen</strong> <span>
+                                                    +47
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sz"></div> <strong>Swaziland</strong> <span>
+                                                    +268
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag se"></div> <strong>Sweden (Sverige)</strong> <span>
+                                                    +46
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ch"></div> <strong>Switzerland (Schweiz)</strong> <span>
+                                                    +41
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag sy"></div> <strong>Syria (‫سوريا‬‎)</strong> <span>
+                                                    +963
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tw"></div> <strong>Taiwan (台灣)</strong> <span>
+                                                    +886
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tj"></div> <strong>Tajikistan</strong> <span>
+                                                    +992
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tz"></div> <strong>Tanzania</strong> <span>
+                                                    +255
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag th"></div> <strong>Thailand (ไทย)</strong> <span>
+                                                    +66
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tl"></div> <strong>Timor-Leste</strong> <span>
+                                                    +670
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tg"></div> <strong>Togo</strong> <span>
+                                                    +228
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tk"></div> <strong>Tokelau</strong> <span>
+                                                    +690
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag to"></div> <strong>Tonga</strong> <span>
+                                                    +676
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tt"></div> <strong>Trinidad and Tobago</strong> <span>
+                                                    +1868
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tn"></div> <strong>Tunisia (‫تونس‬‎)</strong> <span>
+                                                    +216
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tr"></div> <strong>Turkey (Türkiye)</strong> <span>
+                                                    +90
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tm"></div> <strong>Turkmenistan</strong> <span>
+                                                    +993
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tc"></div> <strong>Turks and Caicos Islands</strong> <span>
+                                                    +1649
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag tv"></div> <strong>Tuvalu</strong> <span>
+                                                    +688
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag vi"></div> <strong>U.S. Virgin Islands</strong> <span>
+                                                    +1340
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ug"></div> <strong>Uganda</strong> <span>
+                                                    +256
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ua"></div> <strong>Ukraine (Україна)</strong> <span>
+                                                    +380
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ae"></div> <strong>United Arab Emirates (‫الإمارات العربية المتحدة‬‎)</strong> <span>
+                                                    +971
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag gb"></div> <strong>United Kingdom</strong> <span>
+                                                    +44
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag us"></div> <strong>United States</strong> <span>
+                                                    +1
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag uy"></div> <strong>Uruguay</strong> <span>
+                                                    +598
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag uz"></div> <strong>Uzbekistan (Oʻzbekiston)</strong> <span>
+                                                    +998
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag vu"></div> <strong>Vanuatu</strong> <span>
+                                                    +678
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag va"></div> <strong>Vatican City (Città del Vaticano)</strong> <span>
+                                                    +39
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ve"></div> <strong>Venezuela</strong> <span>
+                                                    +58
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag vn"></div> <strong>Vietnam (Việt Nam)</strong> <span>
+                                                    +84
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag wf"></div> <strong>Wallis and Futuna (Wallis-et-Futuna)</strong> <span>
+                                                    +681
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag eh"></div> <strong>Western Sahara (‫الصحراء الغربية‬‎)</strong> <span>
+                                                    +212
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ye"></div> <strong>Yemen (‫اليمن‬‎)</strong> <span>
+                                                    +967
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag zm"></div> <strong>Zambia</strong> <span>
+                                                    +260
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag zw"></div> <strong>Zimbabwe</strong> <span>
+                                                    +263
+                                                  </span></li><li class="vti__dropdown-item"><div class="vti__flag ax"></div> <strong>Åland Islands</strong> <span>
+                                                    +358
+                                                  </span></li>
+                                                </ul>
+                                              </div> 
+                                              <input type="tel" autocomplete="on" id="v-1607091414807-phone" maxlength="25" name="phone" placeholder="Phone Number (optional)" tabindex="0" class="vti__input" qa="personal-phone">
+                                            </div>
+                                          </div>
+                                        </div> <!----> 
+                                      </div> 
+                                      <div aria-owns="v-1607091414807-footer"></div>
+                                    </fieldset>
+                                  </div>
+                                </div> 
+                                <div id="v-1607091414807-footer" class="footer-row">
+                                  <div class="d-table-cell text-top">
+                                    <div class="px-body pb-5" qa="next-screen-active-button">
+                                      <div role="none" tabindex="" class="sr-only"><!----></div> 
+                                      <div role="none" tabindex="" class="sr-only"><!----></div> 
+                                      <button type="submit" id="desktop-privacy-pay-button" qa="pay-button" aria-busy="false" class="btn btn-payment btn-primary">
+                                        <div class="d-table w-100 btn-donate-label font-size-17">
+                                          <div class="d-table-cell text-middle text-center btn-cell">
+                                            <span>Donate $263</span>
                                           </div>
                                         </div> 
                                         <span class="animated-progress"></span> 
@@ -5264,6 +5858,10 @@
         $('#payment-method-tab').addClass('hidden');  
         $('#amount-tab').removeClass('hidden');  
       }
+      function openCreditCard(){  
+        $('#payment-method-tab').addClass('hidden');  
+        $('#credit-card-tab').removeClass('hidden');  
+      }
 
       function openUpsell(){
         if(!$("#monthly_check" ).prop("checked")){
@@ -5305,6 +5903,7 @@
         $('#amount_payment_method').html(amount);
         $('#upsell-tab').addClass('hidden');  
         $('#amount-tab').addClass('hidden');  
+        $('#credit-card-tab').addClass('hidden');  
         $('#payment-method-tab').removeClass('hidden');  
       }
       $(function () {
