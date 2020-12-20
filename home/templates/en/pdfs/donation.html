@@ -1,193 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% load static %}
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UNICEF</title>
-
-    <!-- Bootstrap -->
-    <link
-      href="{% static 'assets/vendors/bootstrap/dist/css/bootstrap.min.css' %}"
-      rel="stylesheet"
-    />
-
-    <!-- Custom Theme Style -->
-    <link href="{% static 'assets/css/pdf-styles.css' %}" rel="stylesheet" />
-
-    <style>
-      .flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .px-4 {
-        padding-left: 4em;
-        padding-right: 4em;
-      }
-
-      .py-1 {
-        padding-top: 1em;
-        padding-bottom: 1em;
-      }
-
-      .py-2 {
-        padding-top: 2em;
-        padding-bottom: 2em;
-      }
-
-      .color {
-        background-color: #541fc5;
-        color: white;
-      }
-
-      .color-light {
-        background-color: #7299fc;
-        color: white;
-      }
-
-      .mega-title {
-        font-size: 74px;
-        font-weight: 700;
-        padding-bottom: 1em;
-      }
-      .col-md-12 {
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body class="container">
-    <div class="main_container">
-      <!-- page content -->
-      <div class="row">
-        <div class="col-md-12 flex color">
-          <h1 class="bold"><b>INFORMACIÓN DEL PRODUCTOR</b></h1>
-        </div>
-        <div class="col-md-12 flex px-4 py-2">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="control-label col-md-12 py-1">ASEGURADO</label>
-              <div class="col-md-12">
-                <input
-                  type="text"
-                  id="recipe_number"
-                  name="recipe_number"
-                  value="{{policy.client.name}}"
-                  class="color form-control col-md-7 col-xs-12"
-                />
-              </div>
-              <label class="control-label col-md-12 py-1">PRODUCTOR</label>
-              <div class="col-md-12">
-                <input
-                  type="text"
-                  id="recipe_number"
-                  name="recipe_number"
-                  value="{% for user in policy.users.all %} {{user.name}}/ {% endfor %}"
-                  class="color-light form-control col-md-7 col-xs-12"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="control-label col-md-12 py-1">FECHA</label>
-              <div class="col-md-12">
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  value="{{policy.start_date}}"
-                  class="color form-control col-md-7 col-xs-12"
-                />
-              </div>
-              <label class="control-label col-md-12 py-1"
-                >NÚMERO DE PÓLIZA/RECIBO/FACTURA</label
-              >
-              <div class="col-md-12">
-                <input
-                  type="text"
-                  id="recipe_number"
-                  name="recipe_number"
-                  value="{{policy.number}}/{{policy.recipes.last.number}}"
-                  class="color-light form-control col-md-7 col-xs-12"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12 color flex">
-          <h1 class="mega-title">Hola {{name}}</h1>
-        </div>
-        <div class="col-md-12 flex">
-          <img class="img-fluid" src="static/assets/img/de-olival-logo-3.png" />
-        </div>
-        <div class="col-md-12 flex">
-          <table
-            class="table table-striped table-bordered dt-responsive nowrap"
-            cellspacing="0"
-            width="100%"
-          >
-            <tbody>
-              <tr style="height: 40px">
+{% load static %}
+<html>
+<head>
+  <style>
+    @page { font-family: "Arial Narrow", Arial, sans-serif; margin: 60px 80px;}
+    .center { text-align: center; justify-content: center;}
+    footer { position: fixed; bottom: -100px; left: -25px; right: -25px; line-height: 1; background-color: gray; height: 120px; text-align: center; color: #FFF; }
+/*     footer>p footer>a { font-size: 58px; font-weight: 100; } */
+/*     p:last-child { page-break-after: never; } */
+    .line{
+      width: 100%;
+      background-color: rgb(233, 233, 233);
+      font-size: 0.2px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .big-text{
+      font-size: 18px;
+    }
+    .my-10{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .body-table-row{
+      line-height:30px; 
+    }
+  </style>
+</head>
+<body style="font-size:13px;">
+    <header>
+      <table style="width: 100%;">
+        <tbody>
+            <tr>
                 <td>
-                  <p><b>TRANSFERENCIA BANCARIA</b></p>
-                  <p>BÁNCO:</p>
-                  <p>NÚMERO DE COMPROBANTE:</p>
+                    <div style="line-height:16px; font-size:12px;">
+                        <div><b>UNICEF USA</b></div>
+                        <div>125 Maiden Lane</div>
+                        <div>New York, NY 10038</div>
+                        <div>webmaster@unicefusa.org</div>
+                        <div>(800) 367-5437</div>
+                        <div>Tax ID 13-1760110</div>
+                    </div>
                 </td>
-                <td>MONTO</td>
-              </tr>
-              <tr style="height: 40px">
-                <td>
-                  <p><b>PAYPAL</b></p>
-                  <p>USUARIO:</p>
-                  <p>NÚMERO DE COMPROBANTE:</p>
+                <td style="text-align: right;">
+                    <img src="https://i.ibb.co/DwtNyyR/unicef-logo.jpg" style="height: 120px; margin-top: 24px; margin-right:30px;">
                 </td>
-                <td>MONTO</td>
-              </tr>
-              <tr style="height: 40px">
-                <td>
-                  <p><b>DÉBITO DE CUENTA BANCARIA</b></p>
-                  <p>BANCO Y PAGADOR:</p>
-                  <p>NÚMERO DE CUENTA:</p>
-                  <p>FECHA A DEBITAR:</p>
-                </td>
-                <td>MONTO</td>
-              </tr>
-              <tr style="height: 40px">
-                <td>
-                  <p><b>EFECTIVO</b></p>
-                  <p>NOMBRE DEL PAGADOR:</p>
-                </td>
-                <td>MONTO</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-md-12 flex">
-          <table
-            class="table table-striped table-bordered dt-responsive nowrap"
-            cellspacing="0"
-            width="100%"
-          >
-            <tbody>
-              <tr style="height: 80px !important">
-                <td><b>OBSERVACIÓN</b></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <!-- /page content -->
+            </tr>
+        </tbody>
+      </table>
+      <div class="line">&nbsp;</div>
+      <div style="margin-bottom: 10px;"><b class="big-text">Official Donation Receipt</b></div>
+      <div class="my-10"><b>For income tax purposes</b></div>
+      <div class="line">&nbsp;</div>
+    </header>
+  <main>
+    <table style="width: 100%;">
+      <tbody>
+          <tr class="body-table-row">
+            <td>
+              <div><b>Name</b></div>
+            </td>
+            <td colspan="2">
+              <div><b style="font-size: 18px;">Anibal Cardozo :D</b></div>
+            </td>
+          </tr>
+          <tr class="body-table-row">
+            <td>
+              <div><b>Donation Amount</b></div>
+            </td>
+            <td colspan="2">
+              <div><b style="font-size: 18px;">$6.60 USD</b></div>
+            </td>
+          </tr>
+          <tr class="body-table-row">
+            <td><b>Designation</b></td>
+            <td colspan="2">children who need help.</td>
+          </tr>
+          <tr class="body-table-row">
+            <td><b>Donation Date</b></td>
+            <td colspan="2">Nov 2, 2020, 7:21 PM EST</td>
+          </tr>
+          <tr class="body-table-row">
+            <td><b>Receipt Number</b></td>
+            <td colspan="2">DMRZSQHL</td>
+          </tr>
+          <tr class="body-table-row">
+            <td><b>Date Issued </b></td>
+            <td colspan="2">Nov 2, 2020, 7:21 PM EST</td>
+          </tr>
+          <tr class="body-table-row">
+            <td><b>Location Issued</b></td>
+            <td colspan="2" style="line-height: 13px;">125 Maiden Lane <br/> New York, NY 10038</td>
+          </tr>
+      </tbody>
+    </table>
+    <div class="line">&nbsp;</div>
+    <br/>
+    <div>
+      To comply with the IRS requirements regarding charitable donations, we affirm that no goods or services have been
+      provided to you, in whole or in part, in consideration for your contribution. 100% of your gift may be deducted as a
+      charitable contribution under Federal law and, where permitted, under state law. This receipt will serve as confirmation
+      of your donation for income tax purposes.
+      <br/>
+      <br/>
+      <br/>
+      U.S. Fund for UNICEF d/b/a UNICEF USA
     </div>
-    <!--FOOTER-->
-    <div class="footer">
-      <div class="row">
-        <div class="col-md-12 flex"><p>Developed by SappitoTech</p></div>
-      </div>
-    </div>
-  </body>
+  </main>
+</body>
 </html>

@@ -127,3 +127,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'cardozo.anibal@gmail.com'
 EMAIL_HOST_PASSWORD = 'gtlcecfpzvzxrzkd'
 EMAIL_USE_TLS = True
+
+GEOIP_PATH = os.path.join(BASE_DIR, 'geoip/')

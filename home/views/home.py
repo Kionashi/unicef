@@ -4,16 +4,29 @@ from django.conf import settings
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, JsonResponse
 from django.http import HttpResponse
-from django.core.mail import EmailMessage, send_mail
+from django.core.mail import EmailMessage, send_mail, EmailMultiAlternatives
 from io import BytesIO
-from django.template.loader import get_template
+from django.template.loader import get_template, render_to_string
+from django.db import transaction
 from xhtml2pdf import pisa
 import os
-import twocheckout
-
+from django.contrib.gis.geoip2 import GeoIP2
 
 def home(request):
     """ Load home view """
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+
+    g = GeoIP2()
+    print('==================')
+    print(g.city('mega.nz'))
+    # print(g.country(ip))
+    print('==================')
+
     context = {}
     return render(request, 'en/home.html', context)
 
@@ -97,17 +110,22 @@ def send_email(request):
     context = {
         'name': 'Anibal :D'
     }
+    # pdf = render_to_pdf('en/pdfs/donation.html', context)
+    # return HttpResponse(pdf, content_type='application/pdf')
+
+    # return render(request, 'en/pdfs/donation.html', context)
     generate_pdf('en/pdfs/donation.html', context)
     
     # Send response email after a donation with generated pdf
-    message = 'Hola'
-    subject = 'Hey hey people'
-    email_address = 'anibal@sappitotech.com'
-    email = EmailMessage(subject, message, 'cardozo.anibal@gmail.com', [email_address])
-    email.content_subtype = 'html'
-    file = open('media/test.pdf', 'r')
-    email.attach('test.pdf',file.read(),'text/plain')
-    email.send()
+    with transaction.atomic():
+        message = render_to_string('en/emails/donation.html', context, request=request)
+        subject = 'Thank you for your help!'
+        email_address = 'anibal@sappitotech.com'
+        email = EmailMessage(subject, message, 'cardozo.anibal@gmail.com', [email_address])
+        email.content_subtype = 'html'
+        file = open('media/test.pdf', 'r')
+        email.attach('test.pdf',file.read(),'text/plain')
+        email.send()
 
     return HttpResponse('Sent')
 
