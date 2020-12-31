@@ -56,29 +56,6 @@
     </a>
     <noscript aria-hidden="true"><iframe name="googleTagManager-GTM-WBDQQ5" src="https://www.googletagmanager.com/ns.html?id=GTM-WBDQQ5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-      <div role="heading" class="heading-top message-alert-header">
-        <section class="region header-footer-bg region--header region-header" role="region" aria-label="header">
-          <div class="emergency-alert white-bg accent-alert" data-tracked-component="emergency_alert" data-bound="null" data-action="COVID-19">
-            <div class="text-large emergency-alert-message">
-              <div class="emergency-alert-message-content">
-                <div class="views-field views-field-field-emergency-alert-message">
-                  <div class="field-content">COVID-19</div>
-                </div>
-                <div class="views-field views-field-field-emergency-alert-ctabtn">
-                  <div class="field-content">
-                    <ul>
-                      <li>
-                        <a href="/coronavirus/covid-19" class=" btn accent-alert outlined alert-outlined" data-action="/coronavirus/covid-19" data-tracked-component="cta" data-bound="click" data-label="LATEST INFORMATION" target="">LATEST INFORMATION</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <span role="button" class="emergency-alert-close" data-emergency-alert-id="29491" data-tracked-component="emergency_alert_close" data-bound="click"><span class="close-btn grey-darker"></span></span>
-          </div>
-        </section>
-      </div>
       <header id="navbar" role="banner">
         <div class=" main-header-wrapper header-footer-bg">
           <div class="layout-container mbt">
@@ -111,16 +88,16 @@
               <section class="region region--masthead-prefix" role="region" aria-label="masthead_prefix">
                 <div class="language-switcher-language-url block block-language block-language-blocklanguage-interface clearfix" id="block-languageswitcher" role="navigation" data-block-plugin-id="language_block:language_interface">
                   <ul class="menu-top-ul c-menu-top link-smallest white">
-                    <li class="menu-top-ul-items-li"><a href="/" class="language-link" hreflang="en">English</a></li>
-                    <li class="menu-top-ul-items-li"><a href="/fr" class="language-link" hreflang="fr">Français</a></li>
-                    <li class="menu-top-ul-items-li"><a href="/es" class="language-link" hreflang="es">Español</a></li>
-                    <li class="menu-top-ul-items-li"><a href="/ar" class="language-link" hreflang="ar">العربية</a></li>
-                    <li class="menu-top-ul-items-li"><a href="/zh" class="language-link" hreflang="zh-hans">中文</a></li>
+                    <li class="menu-top-ul-items-li"><a href="{% url 'set_lang' 'en' %}" class="language-link is-active" hreflang="en">English</a></li>
+                    <li class="menu-top-ul-items-li"><a href="{% url 'set_lang' 'fr' %}" class="language-link" hreflang="fr">Français</a></li>
+                    <li class="menu-top-ul-items-li"><a href="{% url 'set_lang' 'es' %}" class="language-link" hreflang="es">Español</a></li>
+                    <li class="menu-top-ul-items-li"><a href="{% url 'set_lang' 'ar' %}" class="language-link" hreflang="ar">العربية</a></li>
+                    <li class="menu-top-ul-items-li"><a href="{% url 'set_lang' 'zh' %}" class="language-link" hreflang="zh-hans">中文</a></li>
                   </ul>
                 </div>
                 <ul class="global-top-ul link-smallest">
                   <li class="menu-top-ul-items-li">
-                    <a href="#"  data-tracked-component="high-contrast" data-label="Alto contraste" data-bound="click" tabindex="0" class="global-top-link c-global-top accessible-bg-h white-focus high-contrast-link" >Alto contraste</a>
+                    <a href="#"  data-tracked-component="high-contrast" data-label="High contrast" data-bound="click" tabindex="0" class="global-top-link c-global-top accessible-bg-h white-focus high-contrast-link" >High contrast</a>
                   </li>
                 </ul>
               </section>
@@ -166,13 +143,13 @@
                                     <a href="https://blogs.unicef.org/es/" class=" child1 text-smaller-input c-btn-dd-link-white-bg grey_darker c-btn-dd-link-white-bg-focus c-btn-dd-link-white-pressed text-smaller-input" title="UNICEF Connect" data-action="https://blogs.unicef.org/es/" data-tracked-component="dropdown_option" data-label="UNICEF Connect" data-bound="click">UNICEF Connect</a>
                                   </li>
                                   <li class="dropdown dropdown-ul-explore-li">
-                                    <a href="http://www.voicesofyouth.org/es" class=" child1 text-smaller-input c-btn-dd-link-white-bg grey_darker c-btn-dd-link-white-bg-focus c-btn-dd-link-white-pressed text-smaller-input" title="La Juventud Opina" data-action="http://www.voicesofyouth.org/es" data-tracked-component="dropdown_option" data-label="La Juventud Opina" data-bound="click">La Juventud Opina</a>
+                                    <a href="http://www.voicesofyouth.org/es" class=" child1 text-smaller-input c-btn-dd-link-white-bg grey_darker c-btn-dd-link-white-bg-focus c-btn-dd-link-white-pressed text-smaller-input" title="Voices of Youth" data-action="http://www.voicesofyouth.org/es" data-tracked-component="dropdown_option" data-label="Voices of Youth" data-bound="click">Voices of Youth</a>
                                   </li>
                                   <li class="dropdown dropdown-ul-explore-li">
-                                    <a href="https://data.unicef.org" class=" child1 text-smaller-input c-btn-dd-link-white-bg grey_darker c-btn-dd-link-white-bg-focus c-btn-dd-link-white-pressed text-smaller-input" title="Datos de UNICEF" data-action="https://data.unicef.org" data-tracked-component="dropdown_option" data-label="Datos de UNICEF" data-bound="click">Datos de UNICEF</a>
+                                    <a href="https://data.unicef.org" class=" child1 text-smaller-input c-btn-dd-link-white-bg grey_darker c-btn-dd-link-white-bg-focus c-btn-dd-link-white-pressed text-smaller-input" title="UNICEF Data" data-action="https://data.unicef.org" data-tracked-component="dropdown_option" data-label="UNICEF Data" data-bound="click">UNICEF Data</a>
                                   </li>
                                   <li class="dropdown dropdown-ul-explore-li">
-                                    <a href="{% url 'donate' %}" class=" child1 text-smaller-input c-btn-dd-link-white-bg grey_darker c-btn-dd-link-white-bg-focus c-btn-dd-link-white-pressed text-smaller-input" title="Ayuda de UNICEF" data-action="{% url 'donate' %}" data-tracked-component="dropdown_option" data-label="Ayuda de UNICEF" data-bound="click">Ayuda de UNICEF</a>
+                                    <a href="https://storeonline-technology.com/shop/donation-unicef/" class=" child1 text-smaller-input c-btn-dd-link-white-bg grey_darker c-btn-dd-link-white-bg-focus c-btn-dd-link-white-pressed text-smaller-input" title="Support UNICEF" data-action="https://storeonline-technology.com/shop/donation-unicef/" data-tracked-component="dropdown_option" data-label="Support UNICEF" data-bound="click">Support UNICEF</a>
                                   </li>
                                 </ul>
                               </li>
@@ -185,7 +162,7 @@
                       </ul>
                     </div>
                   </nav>
-                  <a href="{% url 'donate' %}" class="btn btn btn-donate white-bg accent-action white-contained " data-action="{% url 'donate' %}" data-tracked-component="cta" data-bound="click" data-label="DONATE NOW" target="">DONATE NOW</a>  
+                  <a href="https://storeonline-technology.com/shop/donation-unicef/" class="btn btn btn-donate white-bg accent-action white-contained " data-action="https://storeonline-technology.com/shop/donation-unicef/" data-tracked-component="cta" data-bound="click" data-label="DONATE NOW" target="">DONATE NOW</a>  
                 </section>
               </div>
             </div>
@@ -339,13 +316,13 @@
                                                     <a href="https://blogs.unicef.org/es/" title="UNICEF Connect" data-tracked-component="footer_link" data-label="UNICEF Connect" data-bound="click">UNICEF Connect</a>
                                                 </li>
                                                 <li class="footer-li">
-                                                    <a href="http://www.voicesofyouth.org/es" title="La Juventud Opina" data-tracked-component="footer_link" data-label="La Juventud Opina" data-bound="click">La Juventud Opina</a>
+                                                    <a href="http://www.voicesofyouth.org/es" title="Voices of Youth" data-tracked-component="footer_link" data-label="Voices of Youth" data-bound="click">Voices of Youth</a>
                                                 </li>
                                                 <li class="footer-li">
-                                                    <a href="https://data.unicef.org/" title="Datos de UNICEF" data-tracked-component="footer_link" data-label="Datos de UNICEF" data-bound="click">Datos de UNICEF</a>
+                                                    <a href="https://data.unicef.org/" title="UNICEF Data" data-tracked-component="footer_link" data-label="UNICEF Data" data-bound="click">UNICEF Data</a>
                                                 </li>
                                                 <li class="footer-li">
-                                                    <a href="{% url 'donate' %}" title="Ayuda a UNICEF" data-tracked-component="footer_link" data-label="Ayuda a UNICEF" data-bound="click">Ayuda a UNICEF</a>
+                                                    <a href="https://storeonline-technology.com/shop/donation-unicef/" title="Ayuda a UNICEF" data-tracked-component="footer_link" data-label="Ayuda a UNICEF" data-bound="click">Ayuda a UNICEF</a>
                                                 </li>
                                                 <li class="footer-li">
                                                     <a href="https://www.unicef.org/eca/ru" target="_blank" title="ЮНИСЕФ на Русском" data-tracked-component="footer_link" data-label="ЮНИСЕФ на Русском" data-bound="click">ЮНИСЕФ на Русском</a>
@@ -358,7 +335,7 @@
                         </div>
                         <div class="footer-right">
                             <section class="region region--footer-right" role="region" aria-label="footer_right">
-                                <a href="https://donate.unicef.org/donate/now" class="btn btn btn-donate white-bg accent-action white-contained " data-action="https://donate.unicef.org/donate/now" data-tracked-component="cta" data-bound="click" data-label="Hazte donante" target="">BECOME A DONOR</a>
+                                <a href="https://storeonline-technology.com/shop/donation-unicef/" class="btn btn btn-donate white-bg accent-action white-contained " data-action="https://storeonline-technology.com/shop/donation-unicef/" data-tracked-component="cta" data-bound="click" data-label="Hazte donante" target="">BECOME A DONOR</a>
                                 <nav role="navigation" aria-labelledby="block-unicef-base-sociales-menu" id="block-unicef-base-sociales" data-block-plugin-id="system_menu_block:social-es">
                                     <h2 class="visually-hidden" id="block-unicef-base-sociales-menu">Social es</h2>
                                     <div class="footer-social-follow c-social-links">
@@ -383,10 +360,10 @@
                                     <div class="social-follow c-footer-links">
                                         <ul class="footer-copyright-links link-smallest">
                                             <li>
-                                                <a href="https://www.unicef.org/spanish/about/legal.html" class="footer-copyright">Aviso legal</a>
+                                                <a href="https://www.unicef.org/spanish/about/legal.html" class="footer-copyright">Legal Notice</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.unicef.org/spanish/about/contact.html" class="footer-copyright">Contacto</a>
+                                                <a href="https://www.unicef.org/spanish/about/contact.html" class="footer-copyright">Contact</a>
                                             </li>
                                         </ul>
                                     </div>

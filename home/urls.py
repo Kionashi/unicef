@@ -16,4 +16,5 @@ urlpatterns = [
     path('careers', home_views.careers, name='careers'),
     path('donate', home_views.donate, name='donate'),
     path('send-email', home_views.send_email, name='send_email'),
+    path('lang/<str:lang>', home_views.set_lang, name='set_lang'),
 ]

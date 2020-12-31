@@ -1,7 +1,7 @@
 """ Home views. """
 # Django
 from django.conf import settings
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect, JsonResponse
 from django.http import HttpResponse
 from django.core.mail import EmailMessage, send_mail, EmailMultiAlternatives
@@ -26,52 +26,52 @@ def home(request):
     print(g.city('mega.nz'))
     # print(g.country(ip))
     print('==================')
-
+    
     context = {}
-    return render(request, 'en/home.html', context)
+    return render(request, request.session.get('lang', 'en')+'/home.html', context)
 
 def what_we_do(request):
-    """ Load what we do view """
+    """ Renders view considering the language in the session """
     context = {}
-    return render(request, 'en/what-we-do.html', context)
+    return render(request, request.session.get('lang', 'en')+'/what-we-do.html', context)
 
 def research_and_reports(request):
-    """ Load what we do view """
+    """ Renders view considering the language in the session """
     context = {}
-    return render(request, 'en/research-and-reports.html', context)
+    return render(request, request.session.get('lang', 'en')+'/research-and-reports.html', context)
 
 def stories(request):
-    """ Load what we do view """
+    """ Renders view considering the language in the session """
     context = {}
-    return render(request, 'en/stories.html', context)
+    return render(request, request.session.get('lang', 'en')+'/stories.html', context)
 
 def take_action(request):
-    """ Load what we do view """
+    """ Renders view considering the language in the session """
     context = {}
-    return render(request, 'en/take-action.html', context)
+    return render(request, request.session.get('lang', 'en')+'/take-action.html', context)
 
 def press_centre(request):
-    """ Load what we do view """
+    """ Renders view considering the language in the session """
     context = {}
-    return render(request, 'en/press-centre.html', context)
+    return render(request, request.session.get('lang', 'en')+'/press-centre.html', context)
 
 def about_unicef(request):
-    """ Load what we do view """
+    """ Renders view considering the language in the session """
     context = {}
-    return render(request, 'en/about.html', context)
+    return render(request, request.session.get('lang', 'en')+'/about.html', context)
 
 def where_we_work(request):
-    """ Load what we do view """
+    """ Renders view considering the language in the session """
     context = {}
-    return render(request, 'en/where-we-work.html', context)
+    return render(request, request.session.get('lang', 'en')+'/where-we-work.html', context)
 
 def careers(request):
-    """ Load what we do view """
+    """ Renders view considering the language in the session """
     context = {}
-    return render(request, 'en/careers.html', context)
+    return render(request, request.session.get('lang', 'en')+'/careers.html', context)
 
 def donate(request):
-    """ Load what we do view """
+    """ Renders view considering the language in the session """
     # print('===========HERE WE GOOOO===========')
     # twocheckout.Api.auth_credentials({
     #     'private_key': 'C45E1E7A-5AC8-4F56-8F52-76878BB9664E',
@@ -195,3 +195,10 @@ def link_callback(uri, rel):
             'media URI must start with %s or %s' % (sUrl, mUrl)
         )
     return path
+
+def set_lang(request, lang):
+    print('----SET SESSION LANG---')
+    print(lang)
+    print('-----------------------')
+    request.session['lang'] = lang
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

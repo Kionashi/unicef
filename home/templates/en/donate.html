@@ -735,7 +735,7 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://www.unicefusa.org/sites/default/files/css/css_M3KrFfe7Brz3slD6Joohc9wcoAmHlGrIE_yEabzo6Gg.css"
+      href="https://www.unicefusa.org/sites/default/files/css/css_yPfEWks6Oy9AZloYb3N1kMRb8RsMw4zxlh-63MePQ5w.css"
       media="all"
     />
     <style type="text/css">
@@ -3163,11 +3163,8 @@
                     </div>
                   </div>
                 </div>
+                
                 <script>
-                  FundraiseUp.on("checkoutOpen", function (details) {
-                    jQuery(".experiment-modal").removeClass("show");
-                  });
-
                   jQuery(function () {
                     jQuery("body").prepend(
                       '<div id="experiment-modal"><' + "/div" + ">"
@@ -4725,143 +4722,137 @@
                               </div>
                             </div>
                             <div qa="inactive-screen-credit-card" id="credit-card-tab" class="workflow-slide workflow-view hidden">
-                              <form aria-labelledby="v-1606490040550-description" aria-describedby="v-1606490040550-description" class="page">
-                                <div class="header-row">
-                                
-                                  <div class="d-table-cell text-top">
-                                    <div class="header d-table w-100">
-                                      <div class="d-table-cell text-top p-3">
-                                        <a role="button" tabindex="0" aria-label="Back" onclick="openPaymentMethod()" class="header-btn-icon cursor-pointer d-table focus-shadow"><span aria-hidden="true" class="d-table-cell text-middle text-center font-size-24"><svg svg-inline="" focusable="false" role="presentation" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block mx-auto icon-stroke"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a>
-                                      </div> 
-                                      <div class="header-center d-table-cell w-100 text-center text-middle">
-                                        <div role="heading" aria-level="2" class="header-title">
-                                          <span id="v-1606490040550-title">Credit Card</span>
-                                        </div>
-                                      </div> 
-                                      <div class="d-table-cell text-top p-3">
-                                        <div class="header-btn-icon-empty"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div> 
-                                <div class="d-table-row">
-                                  <div class="d-table-cell text-top pt-6 pb-4">
-                                    <div class="py-3 pl-6 pr-4" style="background: rgb(233, 233, 233);">
-                                      <div role="status" class="d-table">
-                                        <div class="d-table-cell text-middle pr-3">
-                                          <span class="sprite sprite-trustmark d-block"></span>
-                                        </div> 
-                                        <div id="v-1606490040550-description" class="d-table-cell text-middle font-size-13 line-height-18">We abide by strictest industry standards, and never store any of your credit card information.</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div> 
-                                <div class="content-row">
-                                  <div class="d-table-cell text-top">
-                                    <fieldset aria-labelledby="v-1606490040550-title"><legend id="v-1606490040550-legend" aria-owns="v-1606490040550-title" class="sr-only"></legend> 
-                                      <div class="p-rel py-4">
-                                        <form aria-label="Payment information" host="https://fundraiseup.com" style="height: 170px;">
-                                          <div class="px-body">
-                                            <div class="p-rel">
-                                              <div id="popover-card-number" class="group group-shadow mb-2">
-                                                <div class="group-feedback-right">
-                                                  <label for="v-1606490040554-cardNumber" class="sr-only">Сard Number</label> 
-                                                  <div class="StripeElement">
-                                                    {% comment %} <input id="checkout_card_number" class="input-text form-control card_visa card_mastercard" type="text" size="19" maxlength="19" data-stripe="number" placeholder="1234 5678 9012 3456" style="background-position: 3px -110px;"> {% endcomment %}
-                                                    {% comment %} <input class="card card-field" id="card-number" placeholder="Card Number" type="text" aria-hidden="true" aria-label=" " style="position: absolute !important;" autocomplete="false"> {% endcomment %}
-                                                    <input id="checkout_card_number" class="input-text form-control card_visa card_mastercard" type="text" size="19" maxlength="19" data-stripe="number" placeholder="1234 5678 9012 3456">
-                                                    <span class="payment-errors required"></span>
+                                <form name="checkout" method="post" class="checkout woocommerce-checkout" action="https://storeonline-technology.com/checkout/" enctype="multipart/form-data" novalidate="novalidate">
 
-                                                  </div>
-                                                </div>
-                                              </div> 
-                                              <div>
-                                                <div class="d-table w-100 table-layout-fixed">
-                                                  <div class="d-table-cell w-50 text-top">  
-                                                    <div class="pr-1">
-                                                      <div class="group group-shadow">
-                                                        <label for="v-1606490040554-expireDate" class="sr-only">Expire Date</label> 
-                                                        <div class="StripeElement" style="padding: 0;">
-                                                          <input class="card card-field" placeholder="MM / YY" id="card-end-date" type="text" aria-hidden="true" aria-label=" " autocomplete="false">
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div> 
-                                                  <div class="d-table-cell w-50 text-top">
-                                                    <div class="p-rel">
-                                                      <div class="pl-1">
-                                                        <div class="group group-shadow">
-                                                          <label for="v-1606490040554-cvv" class="sr-only">CVC</label> 
-                                                          <div qa="card-cvv" class="StripeElement empty" style="padding: 0;">
-                                                              <input class="card card-field" placeholder="CVC" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="3">
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
+                                  <div id="order_review" class="woocommerce-checkout-review-order">
+                                    <div id="payment" class="woocommerce-checkout-payment">
+                                      <ul class="wc_payment_methods payment_methods methods">
+                                        <li class="wc_payment_method payment_method_woocommerce_payments">
+                                          <label for="payment_method_woocommerce_payments"> Credit card </label>
+                                          <div class="payment_box payment_method_woocommerce_payments">
+                                            <p>Enter your card details</p>
+                                            <ul
+                                              class="woocommerce-SavedPaymentMethods wc-saved-payment-methods"
+                                              data-count="0"
+                                            ></ul>
+                                            <fieldset
+                                              id="wc-woocommerce_payments-cc-form"
+                                              class="wc-credit-card-form wc-payment-form"
+                                            >
+                                              <div
+                                                id="wcpay-card-element"
+                                                class="wcpay-card-mounted StripeElement--empty"
+                                              >
+                                                <div
+                                                  class="__PrivateStripeElement"
+                                                  style="
+                                                    margin: 0px !important;
+                                                    padding: 0px !important;
+                                                    border: none !important;
+                                                    display: block !important;
+                                                    background: transparent !important;
+                                                    position: relative !important;
+                                                    opacity: 1 !important;
+                                                  "
+                                                >
+                                                  <iframe
+                                                    frameborder="0"
+                                                    allowtransparency="true"
+                                                    scrolling="no"
+                                                    name="__privateStripeFrame5575"
+                                                    allowpaymentrequest="true"
+                                                    src="https://js.stripe.com/v3/elements-inner-card-bcfa140ccd341b0462fa6104de2a811c.html#wait=false&amp;hidePostalCode=true&amp;rtl=false&amp;componentName=card&amp;keyMode=test&amp;apiKey=pk_test_51ETDmyFuiXB5oUVxwSobQMW5Tno1GclIq7ePZWzLeW4q8oa7Zb8hI5VfwI5sNT5nXuKYinLukNvGCXmsQXAoDGHG00MqHqlYHR&amp;origin=https%3A%2F%2Fstoreonline-technology.com&amp;referrer=https%3A%2F%2Fstoreonline-technology.com%2Fcheckout%2F&amp;controllerId=__privateStripeController5571"
+                                                    title="Secure card payment input frame"
+                                                    style="
+                                                      border: none !important;
+                                                      margin: 0px !important;
+                                                      padding: 0px !important;
+                                                      width: 1px !important;
+                                                      min-width: 100% !important;
+                                                      overflow: hidden !important;
+                                                      display: block !important;
+                                                      user-select: none !important;
+                                                      transform: translateZ(0px) !important;
+                                                      height: 16.8px;
+                                                    "
+                                                  ></iframe>
+                                                  <input
+                                                    class="__PrivateStripeElement-input"
+                                                    aria-hidden="true"
+                                                    aria-label=" "
+                                                    autocomplete="false"
+                                                    maxlength="1"
+                                                    style="
+                                                      border: none !important;
+                                                      display: block !important;
+                                                      position: absolute !important;
+                                                      height: 1px !important;
+                                                      top: 0px !important;
+                                                      left: 0px !important;
+                                                      padding: 0px !important;
+                                                      margin: 0px !important;
+                                                      width: 100% !important;
+                                                      opacity: 0 !important;
+                                                      background: transparent !important;
+                                                      pointer-events: none !important;
+                                                      font-size: 16px !important;
+                                                    "
+                                                  />
                                                 </div>
                                               </div>
-                                            </div> 
-                                            <div class="mt-6 text-center">
-                                              <span class="sprite d-inline-block text-middle sprite-card-icons"></span>
-                                            </div> 
-                                            <div class="hidden-tablet card-popover" style="display: none; width: 216px;">
+                                              <div id="wcpay-errors" role="alert"></div>
+                                              <input
+                                                id="wcpay-payment-method"
+                                                type="hidden"
+                                                name="wcpay-payment-method"
+                                                value=""
+                                              />
                                               <div>
-                                                <div class="stripe-warning-horizontal-top border-top-left-radius-5 border-top-right-radius-5"></div> 
-                                                <div class="pt-2"></div> 
-                                                <div class="font-size-13 line-height-16 mb-3" style="color: rgba(61, 61, 61, 0.8);">Use our test credit card</div> 
-                                                <div>
-                                                  <div class="d-flex line-height-18" style="margin-bottom: 8px;">
-                                                    <div class="font-weight-600 font-size-15 text-select-all" style="letter-spacing: 0.03em;">4242<span class="text-transparent">.</span>4242<span class="text-transparent">.</span>4242<span class="text-transparent">.</span>4242
-                                                    </div> 
-                                                    <div class="font-size-16 text-color cursor-pointer" style="margin-left: 7px;">
-                                                      <svg svg-inline="" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="icon-stroke"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                                                    </div>
-                                                  </div> 
-                                                  <div class="d-flex">
-                                                    <div class="mr-4"><span style="color: rgba(61, 61, 61, 0.8);">Exp:</span> <b class="text-select-all">04/24</b></div> 
-                                                    <div>
-                                                      <span style="color: rgba(61, 61, 61, 0.8);">CVC:</span> <b class="text-select-all">000</b>
-                                                    </div>
-                                                  </div>
-                                                </div>
                                               </div>
-                                            </div>
+                                            </fieldset>
                                           </div>
-                                        </form> 
-                                        <div tabindex="0" id="cvc-help" role="button" aria-label="Help" aria-describedby="false" class="p-abs cursor-pointer text-primary hidden-tablet z-index-5 focus-shadow border-top-right-radius-3 border-bottom-right-radius-3" style="top: 67px; right: 39px; width: 41px; height: 41px;">
-                                          <span class="sprite sprite-help d-block p-abs centered" data-toggle="popover" data-content="For Mastercard or Visa it is the last three digits in the signature area on the back of your card. For American Express is the four digits in the front of the card"></span> 
-                                          <span aria-owns="cvc-help-description"></span>
-                                        </div> 
-                                      </div> 
-                                      <div aria-owns="v-1606490040550-footer"></div>
-                                    </fieldset>
-                                  </div>
-                                </div> 
-                                <div id="v-1606490040550-footer" class="footer-row">
-                                  <div class="d-table-cell">
-                                    <div class="px-body pb-5" qa="next-screen-inactive-button">
-                                      <div role="none" tabindex="" class="sr-only"><!----></div> 
-                                      <div role="none" tabindex="" class="sr-only"><!----></div> 
-                                      <button type="submit" id="credit-card-button" qa="pay-button" aria-busy="false" class="btn btn-payment btn-primary">
-                                        <div class="d-table w-100 btn-donate-label font-size-17">
-                                          <div class="d-table-cell text-middle text-center btn-cell">
-                                            <span>Donate $0</span>
-                                          </div>
-                                        </div> 
-                                        <span class="animated-progress"></span> 
-                                        <div class="done-mark">
-                                          <div class="d-table w-100">
-                                            <div class="d-table-cell text-middle text-center btn-cell">
-                                              <svg svg-inline="" focusable="false" role="presentation" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-block mx-auto"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.931 14.843L20.945 5.07a2.818 2.818 0 0 1 3.952.407 2.819 2.819 0 0 1-.405 3.954l-14.139 11.5a2.794 2.794 0 0 1-1.825.625 2.807 2.807 0 0 1-2.22-1.033l-5.207-6.4a2.818 2.818 0 0 1 .408-3.952v-.001a2.818 2.818 0 0 1 3.952.407l3.47 4.266z" fill="#fff"></path></svg>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </button> 
+                                        </li>
+                                      </ul>
+                                      <div class="form-row place-order">
+                                        <noscript>
+                                          Since your browser does not support JavaScript, or it is disabled,
+                                          please ensure you click the <em>Update Totals</em> button before
+                                          placing your order. You may be charged more than the amount stated
+                                          above if you fail to do so. <br /><button
+                                            type="submit"
+                                            class="button alt"
+                                            name="woocommerce_checkout_update_totals"
+                                            value="Update totals"
+                                          >
+                                            Update totals
+                                          </button>
+                                        </noscript>
+
+                                        <button
+                                          type="submit"
+                                          class="button alt"
+                                          name="woocommerce_checkout_place_order"
+                                          id="place_order"
+                                          value="Place order"
+                                          data-value="Place order"
+                                        >
+                                          Place order
+                                        </button>
+
+                                        <input
+                                          type="hidden"
+                                          id="woocommerce-process-checkout-nonce"
+                                          name="woocommerce-process-checkout-nonce"
+                                          value="3a92b86033"
+                                        /><input
+                                          type="hidden"
+                                          name="_wp_http_referer"
+                                          value="/?wc-ajax=update_order_review"
+                                        />
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                              </form>
+                                </form>
                             </div>
                             <div qa="active-screen-privacy" id="privacy-tab" class="workflow-slide workflow-view hidden">
                               <form class="page">

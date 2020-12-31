@@ -1,0 +1,1196 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8 ie7"  lang="en" dir="ltr" class="no-js"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9 ie8"  lang="en" dir="ltr" class="no-js"><![endif]-->
+<!--[if IE 9]><html class="ie9"  lang="en" dir="ltr" class="no-js"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#" class="no-js">
+<!--<![endif]-->
+<head>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TRK8X8');</script>
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRK8X8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+<script>
+    (function (w, d, s, n, a) {
+      if (!w[n]) {
+        var l = 'call,catch,on,once,set,then,track'
+          .split(','),
+          i, o = function (n) {
+            return 'function' == typeof n ? o.l.push([arguments]) && o :
+              function () {
+                return o.l.push([n, arguments]) && o
+              }
+          },
+          t = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+        j.async = !0;
+        j.src = 'https://cdn.fundraiseup.com/widget/' + a;
+        t.parentNode.insertBefore(j, t);
+        o.s = Date.now();
+        o.v = 4;
+        o.h = w.location.href;
+        o.l = [];
+        for (i = 0; i < 7; i++) o[l[i]] = o(l[i]);
+        w[n] = o
+      }
+    })(window, document, 'script', 'FundraiseUp', 'APQJSHGS');
+
+  </script>
+
+
+<script src="https://cdn.optimizely.com/js/11097406100.js"></script>
+
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"c064680dbb",applicationID:"44757233"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<meta name="google-site-verification" content="gPodG71ljgxWHTADtuwDx4W9ELapLYoMOx2-rJsbt2I" />
+<link rel="shortcut icon" href="https://www.unicefusa.org/sites/all/themes/unicef/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" />
+
+
+<!-- Page-hiding snippet (recommended)  -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-P9NX7GM':true});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-2499545-1', 'auto', {allowLinker: true});
+  ga('require', 'GTM-P9NX7GM');
+</script>
+<meta name="description" content="Find information on UNICEF’s humanitarian aid efforts for children in crisis. Learn more about how you can help keep children safe today!" />
+<meta name="keywords" content="humanitarian aid, keep children safe, children in crisis" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://www.unicefusa.org/" />
+<link rel="shortlink" href="https://www.unicefusa.org/" />
+<meta property="fb:app_id" content="230214117148115" />
+<meta property="fb:pages" content="81517275796" />
+<meta property="og:site_name" content="UNICEF USA" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.unicefusa.org/" />
+<title>Humanitarian Aid for Children in Crisis | UNICEF USA</title>
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+<meta http-equiv="cleartype" content="on">
+
+
+<meta name="com.silverpop.brandeddomains" content="www.pages03.net,unicefusa.mkt6339.com,unicefusa.org" />
+
+
+
+<link rel="apple-touch-icon" sizes="120x120" href="/sites/default/files/WEB16_ApplePayUSFLogo_120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/sites/default/files/WEB16_ApplePayUSFLogo_152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="/sites/default/files/WEB16_ApplePayUSFLogo_167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/sites/default/files/WEB16_ApplePayUSFLogo_180.png">
+<link type="text/css" rel="stylesheet" href="https://www.unicefusa.org/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.unicefusa.org/sites/default/files/css/css_r7C6LG78-XMZN8XCpbD3P0Nj1P1ptdXEV5T5VFbZXXo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.unicefusa.org/sites/default/files/css/css_dz3pWgP3d7QAL2CE926-sZS8KWWhFbhZl3QN0T-pYjE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.unicefusa.org/sites/default/files/css/css_M3KrFfe7Brz3slD6Joohc9wcoAmHlGrIE_yEabzo6Gg.css" media="all" />
+<script src="https://www.unicefusa.org/sites/default/files/js/js_uuz2w-0nqWxgB6lRQNKq7Fs8_dDxyGqoGY4VNeBzLCs.js"></script>
+<script src="https://www.unicefusa.org/sites/default/files/js/js_qE4KfYgJty9x7gyqzjMp9mcDiG6PQCqqJbfsBu7bK8w.js"></script>
+<script>document.createElement( "picture" );</script>
+<script src="https://www.unicefusa.org/sites/default/files/js/js_ooFI-zTaNAuAMgjY3NN27Dxo4fzxDVcYKuEvdN0xIJ0.js"></script>
+<script src="https://www.unicefusa.org/sites/default/files/js/js_9eezJypZWcTzS_6PWzsOiGR11tzSF8xTAS3yu1kLmKU.js"></script>
+<script src="https://www.unicefusa.org/sites/default/files/js/js_r0pDkO-nuu-AtQ4wCsRKuBG2LagGQWwyg5COD5CBAe0.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"unicef","theme_token":"o_xGn4vLStuXNBVddQ7Ta4D8suK9Ohm5wkOuZxvx5p4","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/contrib\/columns_filter\/columns_filter.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/springboard_modules\/webform_goals\/css\/webform_goals.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/features\/unicef_configuration\/plugins\/layouts\/unicef_feature_mixed\/unicef_feature_mixed.css":1,"sites\/all\/modules\/contrib\/panels\/plugins\/layouts\/twocol_stacked\/twocol_stacked.css":1,"sites\/all\/modules\/contrib\/webform\/css\/webform.css":1,"sites\/all\/themes\/unicef\/system.menus.css":1,"sites\/all\/themes\/unicef\/system.messages.css":1,"sites\/all\/themes\/unicef\/system.theme.css":1,"sites\/all\/themes\/unicef\/css\/components\/misc.css":1,"sites\/all\/themes\/unicef\/css\/print.css":1,"sites\/all\/themes\/unicef\/css\/fonts\/ss-social-circle.css":1,"sites\/all\/themes\/unicef\/css\/fonts\/ss-social-regular.css":1,"sites\/all\/themes\/unicef\/css\/navigation.css":1,"sites\/all\/themes\/unicef\/css\/mmenu.css":1,"sites\/all\/themes\/unicef\/css\/styles.css":1,"sites\/all\/themes\/unicef\/css\/urgent-billboard.css":1},"js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.min.js":1,"https:\/\/s7.addthis.com\/js\/250\/addthis_widget.js":1,"sites\/all\/modules\/contrib\/clientside_validation\/clientside_validation.ie8.js":1,"sites\/all\/modules\/contrib\/clientside_validation\/clientside_validation_html5\/clientside_validation_html5.js":1,"sites\/all\/modules\/contrib\/clientside_validation\/clientside_validation.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.9\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.effect.min.js":1,"0":1,"sites\/all\/modules\/custom\/unicef_mobile\/js\/unicef_mobile.js":1,"sites\/all\/modules\/custom\/unicef_tot\/js\/mock-form.js":1,"sites\/all\/modules\/springboard_modules\/webform_goals\/scripts\/webform_goals.drupal_loader.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/springboard_modules\/market_source\/js\/jquery-cookie.js":1,"sites\/all\/modules\/springboard_modules\/market_source\/js\/market_source.js":1,"sites\/all\/libraries\/jstorage\/jstorage.min.js":1,"sites\/all\/modules\/springboard_modules\/secure_prepopulate\/springboard_cookie\/js\/springboard_cookie.cacheable.js":1,"sites\/all\/modules\/custom\/unicef_hooks\/js\/jquery.plugins.js":1,"sites\/all\/modules\/custom\/unicef_message\/unicef_message.js":1,"sites\/all\/modules\/custom\/unicef_share\/js\/unicef_share.js":1,"sites\/all\/modules\/contrib\/webform\/js\/webform.js":1,"sites\/all\/modules\/contrib\/clientside_validation\/jquery-validate\/jquery.validate.js":1,"sites\/all\/themes\/unicef\/js\/jquery.uniform.min.js":1,"sites\/all\/themes\/unicef\/js\/jquery.mmenu.min.js":1,"sites\/all\/themes\/unicef\/js\/actual.min.js":1,"sites\/all\/themes\/unicef\/js\/jquery.visible.min.js":1,"sites\/all\/themes\/unicef\/css\/fonts\/ss-social.js":1,"sites\/all\/themes\/unicef\/js\/blockui.min.js":1,"sites\/all\/themes\/unicef\/js\/jquery.flexslider.min.js":1,"sites\/all\/themes\/unicef\/js\/jquery.jcarousel.min.js":1,"sites\/all\/themes\/unicef\/js\/layout.engine.min.js":1,"sites\/all\/themes\/unicef\/js\/jquery.stickem.js":1,"sites\/all\/themes\/unicef\/js\/script.js":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":false,"mobiledevicewidth":"480px","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"market_source":{"qs_keys":{"ms":{"value":null,"persistence":"off"},"cid":{"value":null,"persistence":"off"},"referrer":{"value":null,"persistence":"direct"},"initial_referrer":{"value":null,"persistence":"direct"},"search_engine":{"value":null,"persistence":"on"},"search_string":{"value":null,"persistence":"on"},"user_agent":{"value":null,"persistence":"on"},"device_type":{"value":null,"persistence":"direct"},"device_name":{"value":null,"persistence":"direct"},"device_os":{"value":null,"persistence":"direct"},"device_browser":{"value":null,"persistence":"direct"},"utm_source":{"value":null,"persistence":"on"},"utm_medium":{"value":null,"persistence":"on"},"utm_term":{"value":null,"persistence":"on"},"utm_content":{"value":null,"persistence":"on"},"utm_campaign":{"value":null,"persistence":"on"},"pcode":{"value":null,"persistence":"direct"},"initialms":{"value":null,"persistence":"on"},"ftouch":{"value":null,"persistence":"on"},"rpcode":{"value":null,"persistence":"direct"},"eml_name":{"value":null,"persistence":"on"},"eml_id":{"value":null,"persistence":"on"},"club_type":{"value":null,"persistence":"on"},"role":{"value":null,"persistence":"on"},"school_id":{"value":null,"persistence":"on"},"ask_amount":{"value":null,"persistence":"on"},"su_cid":{"value":null,"persistence":"on"},"su_rdid":{"value":null,"persistence":"on"},"social_referer_transaction":{"value":null,"persistence":"on"},"mgid":{"value":null,"persistence":true}},"maxlength":255,"cookie_domain":".unicefusa.org","cookie_path":"\/","form_keys":{"webform-client-form-66":{"ms":"submitted[ms]","cid":"submitted[cid]","referrer":"submitted[referrer]","initial_referrer":"submitted[initial_referrer]","search_engine":"submitted[search_engine]","search_string":"submitted[search_string]","user_agent":"submitted[user_agent]","device_type":"submitted[device_type]","device_name":"submitted[device_name]","device_os":"submitted[device_os]","device_browser":"submitted[device_browser]","utm_source":"submitted[utm_source]","utm_medium":"submitted[utm_medium]","utm_term":"submitted[utm_term]","utm_content":"submitted[utm_content]","utm_campaign":"submitted[utm_campaign]","initialms":"submitted[initialms]","ftouch":"submitted[ftouch]","social_referer_transaction":"submitted[social_referer_transaction]"},"webform-client-form-29586":{"ms":"submitted[ms]","cid":"submitted[cid]","referrer":"submitted[referrer]","initial_referrer":"submitted[initial_referrer]","search_engine":"submitted[search_engine]","search_string":"submitted[search_string]","user_agent":"submitted[user_agent]","device_type":"submitted[device_type]","device_name":"submitted[device_name]","device_os":"submitted[device_os]","device_browser":"submitted[device_browser]","utm_source":"submitted[utm_source]","utm_medium":"submitted[utm_medium]","utm_term":"submitted[utm_term]","utm_content":"submitted[utm_content]","utm_campaign":"submitted[utm_campaign]","initialms":"submitted[initialms]","ftouch":"submitted[ftouch]","social_referer_transaction":"submitted[social_referer_transaction]"}}},"sb_social":{"id":false,"id_type":"path","market_source":"","pubid":"ra-575b0c85d28153eb"},"springboard":{"cookie_path":"\/"},"springboard_cookie":{"name":"Springboard","domain":""},"unicef_message":{"report_share":false},"unicef_share":{"pubid":"ra-575b0c85d28153eb"},"webform_goals":{"loader_url":"https:\/\/www.unicefusa.org\/webform_goals_jsonp"},"urlIsAjaxTrusted":{"\/?form=donate":true,"\/form\/sign-updates?form=donate":true},"clientsideValidation":{"forms":{"webform-client-form-66":{"errorPlacement":"5","general":{"errorClass":"error","wrapper":"li","validateTabs":0,"scrollTo":1,"scrollSpeed":"1000","disableHtml5Validation":"1","validateOnBlur":"1","validateOnBlurAlways":"1","validateOnKeyUp":"1","validateBeforeAjax":"0","validateOnSubmit":"1","showMessages":"0","errorElement":"span"},"rules":{"submitted[mail]":{"required":true,"messages":{"required":"Email Address field is required.","email":"The value in Email Address is not a valid email address."},"email":true},"submitted[zip]":{"maxlength":128,"messages":{"maxlength":"Zip field has a max length of 128 characters."}}}},"webform-client-form-29586":{"errorPlacement":"5","general":{"errorClass":"error","wrapper":"li","validateTabs":0,"scrollTo":1,"scrollSpeed":"1000","disableHtml5Validation":"1","validateOnBlur":"1","validateOnBlurAlways":"1","validateOnKeyUp":"1","validateBeforeAjax":"0","validateOnSubmit":"1","showMessages":"0","errorElement":"span"},"rules":{"submitted[mail]":{"required":true,"messages":{"required":"Stay informed field is required.","email":"The value in Stay informed is not a valid email address."},"email":true}}},"search-block-form":{"errorPlacement":"5","general":{"errorClass":"error","wrapper":"li","validateTabs":0,"scrollTo":1,"scrollSpeed":"1000","disableHtml5Validation":"1","validateOnBlur":"1","validateOnBlurAlways":"1","validateOnKeyUp":"1","validateBeforeAjax":"0","validateOnSubmit":"1","showMessages":"0","errorElement":"span"},"rules":{"search_block_form":{"maxlength":128,"messages":{"maxlength":"Search field has to have maximum 128 values."}}}}},"general":{"usexregxp":0,"months":{"January":1,"Jan":1,"February":2,"Feb":2,"March":3,"Mar":3,"April":4,"Apr":4,"May":5,"June":6,"Jun":6,"July":7,"Jul":7,"August":8,"Aug":8,"September":9,"Sep":9,"October":10,"Oct":10,"November":11,"Nov":11,"December":12,"Dec":12}},"groups":{"webform-client-form-66":{},"webform-client-form-29586":{},"search-block-form":{}}}});</script>
+<!--[if lt IE 9]>
+    <script src="/sites/all/themes/zen/js/html5-respond.js"></script>
+    <![endif]-->
+</head>
+<body class="html front not-logged-in no-sidebars page-home page-panels non-tablet">
+<div class="header-fixed"></div>
+<div class="header-alert">
+</div>
+<header class="header" id="header" role="banner">
+<div class="logo">
+<a href="/" title="Home" rel="home" id="logo">UNICEF United States Fund</a>
+</div>
+<div class="inner">
+<a class="makemenu" href="#menu">Menu</a>
+<div class="header__region region region-header">
+<div id="block-block-113" class="test block block-block first odd">
+<style>
+                                /* Giving the header more space in widescreen */
+@media screen and (min-width: 940px) {
+        #header {
+                height: 6.5em;
+        }
+        .header__region, .menu-block-1 {
+                margin-top: 0.4em;
+        }
+        .sub-menus {
+                margin-top: 0.7em;
+        }
+        .fixed .header__region, .fixed .menu-block-1, .fixed .sub-menus {
+                margin-top: 0;
+        }
+        .header__region .block.block-search {
+                margin-top: 1.1em;
+        }
+        #logo {
+                height: 130px;
+                background-image: url(https://www.unicefusa.org/sites/default/files/UNICEFUSA_DIG_C.svg);
+                background-position: 0 98%;
+        }
+        #logo:hover {
+                /* background-position: 100% 98%; */
+        }
+        #header #block-webform-client-block-29586 {
+                margin-right: 1em;
+                background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAPBAMAAADXMbjKAAAAElBMVEWjwM6dvs+evsygvc2ev9Kfv85dbDX/AAAAGUlEQVQI12MAAQEGAzAOALMVGByAmAFEAgAWXgHBrLcCrAAAAABJRU5ErkJggg==') no-repeat 100% 8px;
+        }
+
+}
+                                /* Chopping off that mysterious 20px below the footer */
+#page {
+         overflow: visible;
+}
+#footer {
+         position: relative;
+         bottom: -20px;
+         margin-top: -20px;
+         overflow: visible;
+}
+                                /* Layout changes to the header in general */
+#header.fixed #block-menu-block-2, 
+#header.fixed #block-menu-block-1 li {
+        top: 0;
+}
+.block-title, #block-block-113,
+#header.fixed #block-webform-client-block-29586,
+#block-webform-client-block-29586 .form-required  {
+        display: none;
+}
+#header #block-unicef-blocks-unicef-signin-register {
+        float: right;
+        display: none;
+}
+#block-unicef-blocks-unicef-signin-register .login-block a.sign-in-link {
+        margin-right: 1rem;
+        padding-right: 1rem;
+}
+#header.fixed #block-unicef-blocks-unicef-signin-register {
+        display: none !important;
+}
+
+                                /* The email signup form proper */
+#block-webform-client-block-29586 {
+        float: right;
+        margin: 0;
+        padding-right: 1em;
+}
+#block-webform-client-block-29586 .webform-component-email,
+#block-webform-client-block-29586 .webform-component-email label,
+#block-webform-client-block-29586 .webform-component-email input,
+#block-webform-client-block-29586 .form-actions {
+        display: inline-block;
+        position: relative;
+        vertical-align: bottom;
+        font-family: 'Roboto', arial, sans-serif;
+        font-size: 0.9em;
+        font-weight: 300;
+        min-height: auto;
+        margin-bottom: 0;
+}
+#block-webform-client-block-29586 .webform-component-email {
+        right: -7px;
+        margin: 0;
+}
+#block-webform-client-block-29586 .webform-component-email label,
+#block-webform-client-block-29586 .webform-component-email input {
+        height: 2rem;
+        line-height: 2rem;
+}
+#block-webform-client-block-29586 .webform-component-email label {
+        top: 2px;
+        margin-right: 0.4em;
+        font-weight: 600;
+        color: #7e7e7e;
+}
+#block-webform-client-block-29586 .webform-component-email label.error {
+        position: absolute;
+        box-sizing: border-box;
+        right: 0;
+        top: 95%;
+        width: 19.8em;
+        padding: 0 0.75em;
+        margin: 0 -1.9em 0 0;
+        border-radius: 2px;
+        height: 0.8em;
+        line-height: 1em;
+}
+#block-webform-client-block-29586 .webform-component-email input {
+        max-width: 14.22em;
+        margin-right: -2em;
+        border: 1px solid #d1e7f2;
+        border-radius: 5px; 
+        background-color:#fff;
+        padding-left: 0.75em;
+        padding-right: 2em;
+        padding-top: 4px;
+}
+#block-webform-client-block-29586 .form-submit {
+        height: 2rem; 
+        padding: 0px 0.5rem; 
+        border: 1px solid #d1e7f2;
+        border-left: none;
+        border-top-right-radius: 5px; 
+        border-bottom-right-radius: 5px; 
+        background-color: #fff;
+        font-size: 1.3em;
+        color: #004060;
+        position: relative;
+}
+#block-webform-client-block-29586 .form-submit:hover {
+        color: #22b9f1;
+}
+#block-webform-client-block-29586 .pledge-processing-wrapper {
+        display: none;
+}
+                                        /* Error messages display for clientside inline validation */
+label.error {
+    position: absolute;
+    bottom: -1.4em;
+    z-index: 1;
+    font-family: 'Roboto', arial, sans-serif;
+    color: #F20 !important;
+    white-space: nowrap;
+    background: transparent;
+}   
+.pane-homepage-connect-with-us label.error {
+    bottom: 2em;
+    min-width: 400px;
+}
+#block-webform-client-block-29586 .webform-component-email label.error {
+    text-align: right;
+}
+.section-user .column label.error,
+.node-type-webform .panel-display label.error,
+.section-submit-your-event-application .column label.error {
+    position: static;
+}
+
+@media screen and (max-width: 939px) and (min-width: 768px) {
+        #header #block-unicef-blocks-unicef-signin-register { display: none; }
+        #header #block-webform-client-block-29586 {
+                position: relative;
+                top: 4px;
+                margin-left: 8em;
+                border-right: none;
+        }
+        body #header #block-menu-block-2,
+        body #header .block.block-search, body #header.fixed .block.block-search {
+                right: 1em;
+        }
+        body #header.fixed #block-menu-block-2 {
+                margin-right: 1em;
+        }
+        body #header .block.block-search .search-open-close {
+                left: 1em;
+                display: none;
+        }
+}
+@media screen and (min-width: 768px) {
+        #header #block-menu-block-2 ul.menu li.first .menu__link, 
+        #header #block-menu-block-2 ul.menu li.index-1 .menu__link,
+        #header.fixed #block-menu-block-2 ul.menu li.first .menu__link, 
+        #header.fixed #block-menu-block-2 ul.menu li.index-1 .menu__link,
+        .block.block-search, .gsc-input-wrapper {
+                border-radius: 5px !important;
+        }
+}
+@media screen and (max-width: 767px) {
+        #header #block-webform-client-block-29586 {
+                float: none;
+                position: absolute;
+                top: 0.85em;
+                left: 22vw;
+        }
+        body #header #block-menu-block-2 ul.menu li.first .menu__link,
+        body #header #block-menu-block-2 ul.menu li.index-1 .menu__link {
+                border-radius: 0;
+        }
+        body #header #block-menu-block-2 {
+                right: 0;
+        }
+        #header #block-webform-client-block-29586 .webform-component-email input {
+                width: 14em;
+        }
+}
+
+@media screen and (max-width: 529px) {
+        #block-webform-client-block-29586 {
+                display: none;
+        }
+}
+                                               /* This is for an optimizely test running in Spring/Summer 2016 */
+@media screen and (max-width: 767px) {
+        .cleaner {
+                display: none;
+        }
+        .slimmer {
+                padding-top: 1.75em;
+        }
+}
+@media (min-width: 768px) {
+#header #block-menu-block-2 ul.menu li.index-2 .menu__link {
+    background: #21b9f1;
+    text-indent: 0px;
+    position: relative;
+    border-radius: 5px !important;
+    display: block;
+    padding: 4px 16px;
+    font-family: "Roboto",helvetica,arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 8px;
+   }
+}
+</style>
+<script>
+
+//jQuery(document).ready( function($) {
+        //$('#webform-client-form-29586 #edit-submitted-mail').attr("placeholder", "email@example.com");
+        //$('#webform-client-form-29586 #edit-submitted-mail--2').attr("placeholder", "email@example.com");
+        //setTimeout( function() {
+                //$(".feature > img").css("visibility", "visible");
+        //}, 800);
+        //setTimeout( function() {
+                //Stripe.applePay.checkAvailability(function(available) {
+                        //if(available) {
+                                //jQuery('.menu-name-user-menu .index-0 a').attr("href", "https://www.unicefusa.org/node/31336?ms=ref_dig_2015_web_header_donate");
+                        //}
+                //});
+        //}, 2000);
+//});
+</script>
+<script async type="text/javascript" src="https://js.stripe.com/v2/"></script>
+</div>
+<div id="block-menu-block-2" class="test block block-menu-block even" role="navigation">
+<div class="menu-block-wrapper menu-block-2 menu-name-user-menu parent-mlid-0 menu-level-1">
+<ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-8286 index-0"><a href="https://www.unicefusa.org/#FUNVJWTZOTR" title="Donate Now" class="menu__link">Donate</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-3491 index-1"><a href="/node/846" title="" class="menu__link">How to Help</a><div class="get-involved-menu-wrap"><div class="left-col"><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-3658"><a href="/form/e-mail-signup" title="" class="menu__link">Sign Up</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-408"><a href="/help/shop" title="" class="menu__link">shop</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-503"><a href="/help/advocate" title="" class="menu__link">advocate</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-12686"><a href="/donate/give-now-help-child-refugees/26936" title="" class="menu__link">Refugee Crisis</a></li>
+</ul></div><div class="right-col"><ul class="menu"><li class="menu__item is-leaf leaf menu-mlid-3490"><a href="/help/donate/monthly" title="" class="menu__link">Donate Monthly</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-403"><a href="https://secure.unicefusa.org/user" title="Manage your monthly gift" class="menu__link">sign in</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-505"><a href="/help/events" title="" class="menu__link">Support an Event</a></li>
+</ul></div></div></li>
+<li class="menu__item is-leaf last leaf menu-mlid-16871 index-2"><a href="/help/shop" title="Shop" class="menu__link">Shop</a></li>
+</ul></div>
+</div>
+<div id="block-unicef-blocks-unicef-signin-register" class="test block block-unicef-blocks odd">
+<div class="login-block login-register-links"><a href="/user" class="sign-in-link">sign in</a><a href="/user/register" class="register-link">register</a></div>
+</div>
+<div id="block-webform-client-block-29586" class="test block block-webform even">
+<h2 class="block__title block-title">Sign Up For Updates</h2>
+<form class="webform-client-form" enctype="multipart/form-data" action="/form/sign-updates?form=donate" method="post" id="webform-client-form-29586" accept-charset="UTF-8"><div><input class="webform" type="hidden" name="submitted[ms]" value="web_dig_unicefusaorg-default" />
+<div class="form-item webform-component webform-component-email" id="webform-component-mail">
+<label for="edit-submitted-mail--2">Stay informed <span class="form-required" title="This field is required.">*</span></label>
+<input class="email  form-text form-email required" type="email" id="edit-submitted-mail--2" name="submitted[mail]" size="60" />
+</div>
+<input class="webform" type="hidden" name="submitted[cid]" value="" />
+<input class="webform" type="hidden" name="submitted[referrer]" value="" />
+<input class="webform" type="hidden" name="submitted[initial_referrer]" value="" />
+<input class="webform" type="hidden" name="submitted[search_engine]" value="" />
+<input class="webform" type="hidden" name="submitted[search_string]" value="" />
+<input class="webform" type="hidden" name="submitted[user_agent]" value="" />
+<input class="webform" type="hidden" name="submitted[social_referer_transaction]" value="" />
+<input class="" type="hidden" name="submitted[utm_content]" value="" />
+<input class="" type="hidden" name="submitted[utm_medium]" value="" />
+<input class="" type="hidden" name="submitted[utm_campaign]" value="" />
+<input class="" type="hidden" name="submitted[utm_source]" value="" />
+<input class="" type="hidden" name="submitted[utm_term]" value="" />
+<input class="" type="hidden" name="submitted[initialms]" value="" />
+<input class="" type="hidden" name="submitted[form]" value="Sign Up For Updates" />
+<input class="" type="hidden" name="submitted[form_url]" value="https://www.unicefusa.org/home" />
+<input class="" type="hidden" name="submitted[e_mail_opt_in]" value="1" />
+<input class="" type="hidden" name="submitted[ftouch]" value="" />
+<input class="" type="hidden" name="submitted[device_type]" value="" />
+<input class="" type="hidden" name="submitted[device_name]" value="" />
+<input class="" type="hidden" name="submitted[device_os]" value="" />
+<input class="" type="hidden" name="submitted[device_browser]" value="" />
+<input class="" type="hidden" name="submitted[email]" value="" />
+<div class="form-item webform-component webform-component-markup" id="webform-component-js-for-stay-informed">
+<style>
+#webform-component-js-for-stay-informed { 
+display: none !important;
+}
+</style>
+<script>
+var stayInformedEmail = document.getElementById('edit-submitted-mail--2');
+if (stayInformedEmail) {
+stayInformedEmail.placeholder='example@email.com';
+}
+</script>
+</div>
+<input type="hidden" name="details[sid]" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<input type="hidden" name="form_build_id" value="form-u06nRk-mSfwB3I_-ks561B6bw9NWF5Nt4Ywvh58LhKs" />
+<input type="hidden" name="form_id" value="webform_client_form_29586" />
+<div class="form-actions form-wrapper" id="edit-actions--2"><input class="btn form-submit" type="submit" id="edit-submit--2" name="op" value="»" /></div></div></form>
+</div>
+<div id="block-menu-block-1" class="test block block-menu-block odd" role="navigation">
+<div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-1">
+<ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-2649"><a href="/mission" class="menu__link">our mission</a><div class="sub-item-wrap"><ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-2651"><a href="/mission/survival" class="menu__link">Saving Lives</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-19383"><a href="/mission/covid-19" class="menu__link">Coronavirus (COVID-19)</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6031"><a href="/mission/survival/ebola" class="menu__link">Ebola</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-2656"><a href="/mission/survival/hiv-aids" class="menu__link">HIV/AIDS</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-2654"><a href="/mission/survival/immunization" class="menu__link">Immunization</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2653"><a href="/mission/survival/nutrition" class="menu__link">Nutrition</a></li>
+<li class="menu__item is-leaf is-parent last leaf has-children menu-mlid-2652"><a href="https://www.unicefusa.org/mission/survival/water" title="" class="menu__link">Water</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2660"><a href="/mission/protect" class="menu__link">Building Futures</a><ul class="menu"><li class="menu__item is-leaf is-parent first leaf has-children menu-mlid-2661"><a href="/mission/protect/trafficking" class="menu__link">Child Trafficking</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-19379"><a href="https://www.unicefusa.org/mission/climate-change  " title="" class="menu__link">Climate Change</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2859"><a href="/mission/protect/disabilities" class="menu__link">Disabilities</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-2858"><a href="/mission/protect/education" class="menu__link">Education</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-18917"><a href="https://www.unicefusa.org/mission/equity-girls" title="Our equity for girls page" class="menu__link">Equity for Girls</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-18916"><a href="https://www.unicefusa.org/innovation" title="" class="menu__link">Innovation</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-19380"><a href="https://www.unicefusa.org/stories/sponsor-child-today/35543" title="" class="menu__link">Sponsor a Child</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-13086"><a href="/mission/protect/endviolence" class="menu__link">Violence</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2807"><a href="/mission/emergencies" class="menu__link">Emergency Relief</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-15874"><a href="/mission/emergencies/conflict/boko-haram-crisis" class="menu__link">Boko Haram Crisis</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-12691"><a href="/mission/emergencies/child-refugees-and-migrants" class="menu__link">Child Refugees</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-2668"><a href="/mission/emergencies/conflict" class="menu__link">Conflict</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-2878"><a href="/mission/emergencies/earthquakes" class="menu__link">Earthquakes</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-2865"><a href="/mission/emergencies/food-crises" class="menu__link">Food Crises</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2665"><a href="/mission/emergencies/hurricanes" class="menu__link">Hurricanes</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2670"><a href="/mission/where" class="menu__link">Where UNICEF Works</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-16860"><a href="/mission/emergencies/child-refugees-and-migrants/rohingya-refugee-children-are-desperate-need-help" class="menu__link">Bangladesh</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3196"><a href="/mission/emergencies/child-refugees-and-migrants/central-african-republic" class="menu__link">Central African Republic</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-18915"><a href="https://www.unicefusa.org/mission/emergencies/child-refugees/central-american-child-migrants" title="Our work in Central America" class="menu__link">Central America</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-18913"><a href="/mission/emergencies/haiti" class="menu__link">Haiti</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5576"><a href="/mission/emergencies/child-refugees-and-migrants/iraq-crisis" class="menu__link">Iraq</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-18914"><a href="/mission/emergencies/conflict/crisis-nigeria" class="menu__link">Nigeria</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5571"><a href="/mission/emergencies/conflict/south-sudan" title="" class="menu__link">South Sudan</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2677"><a href="/mission/emergencies/child-refugees-and-migrants/syria-crisis" class="menu__link">Syria</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-18398"><a href="/mission/emergencies/child-refugees/crisis-in-yemen" class="menu__link">Yemen</a></li>
+</ul></li>
+<li class="menu__item is-expanded last expanded menu-mlid-3117"><a href="/mission/usa" class="menu__link">UNICEF USA Initiatives</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-19381"><a href="https://act.unicefusa.org/" title="" class="menu__link">Advocacy Action Center</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-19377"><a href="https://www.unicefusa.org/mission/usa/childfriendlycities" title="" class="menu__link">Child Friendly Cities</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4734"><a href="/mission/survival/immunization/tetanus/eliminate" title="" class="menu__link">Eliminate Project</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-19385"><a href="https://www.unicefusa.org/impact-fund-for-children" title="" class="menu__link">Impact Fund for Children</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4732"><a href="/trick-or-treat-uws" title="" class="menu__link">Trick-or-Treat for UNICEF</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4736"><a href="/help/advocate" class="menu__link">U.S. Advocacy</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-13076"><a href="http://unicefkidpower.org" title="UNICEF Kid Power" class="menu__link">UNICEF Kid Power</a></li>
+</ul></li>
+</ul></div></li>
+<li class="menu__item is-expanded expanded menu-mlid-1243"><a href="/supporters" class="menu__link">our supporters</a><div class="sub-item-wrap"><ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-3483"><a href="/supporters/donors" class="menu__link">Donors</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-3113"><a href="/help/donate/monthly" class="menu__link">Guardian Circle - Monthly Giving</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-18135"><a href="https://www.unicefusa.org/supporters/donors/leadership-circle" title="" class="menu__link">Leadership Circle</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-2696"><a href="/supporters/donors/nextgen" class="menu__link">Next Generation</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2695"><a href="http://unicefusa.planmylegacy.org/" title="" class="menu__link">Planned Giving Donors</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-3484"><a href="/supporters/donors/humanitarian-circle" class="menu__link">Humanitarian Circle</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-16859"><a href="/help/events" title="Support an Event" class="menu__link">Special Events</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-19375"><a href="https://www.unicefusa.org/help/donate/donor-advised-funds " title="" class="menu__link">Donor Advised Funds</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-18918"><a href="https://www.unicefusa.org/unite" title="Get involved!" class="menu__link">Volunteers</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-18919"><a href="https://www.unicefusa.org/help/advocate" title="Advocate" class="menu__link">Online Activists</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-18920"><a href="https://www.unicefusa.org/supporters/volunteers/fundraisers" title="Fundraisers" class="menu__link">Fundraisers</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-18921"><a href="https://www.unicefusa.org/supporters/volunteers/unicef-clubs" title="Unicef Clubs" class="menu__link">Unicef Clubs</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-18922"><a href="https://www.unicefusa.org/supporters/volunteers/fundraisers/marathon" title="Marathon Runners" class="menu__link">Marathon Runners</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-18923"><a href="https://unicefkidpower.org/" title="Kid Power" class="menu__link">Teachers</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2681"><a href="/supporters/organizations" class="menu__link">Organizations</a><ul class="menu"><li class="menu__item is-leaf is-parent first leaf has-children menu-mlid-3488"><a href="/supporters/organizations/companies" class="menu__link">Companies</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3489"><a href="/supporters/organizations/foundations" class="menu__link">Foundations</a></li>
+<li class="menu__item is-leaf is-parent last leaf has-children menu-mlid-3596"><a href="https://www.unicefusa.org/supporters/organizations/civil-society/global-cause-partnerships" title="" class="menu__link">Global Cause Partnerships</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2683"><a href="/supporters/regional" class="menu__link">Regional Communities</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-15860"><a href="https://www.unicefusa.org/supporters/regional/dallas" title="" class="menu__link">Dallas Community</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-12556"><a href="/supporters/regional/washington" class="menu__link">Mid-Atlantic</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-4497"><a href="/supporters/regional/chicago" class="menu__link">Midwest Community</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4487"><a href="/newengland" class="menu__link">New England</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4500"><a href="/supporters/regional/new-york" class="menu__link">New York</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4489"><a href="/supporters/regional/san-francisco" class="menu__link">Northwest</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-4499"><a href="/supporters/regional/atlanta" class="menu__link">Southeast</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4496"><a href="/supporters/regional/los-angeles" class="menu__link">Southern California</a></li>
+<li class="menu__item is-leaf is-parent last leaf has-children menu-mlid-4501"><a href="/supporters/regional/southwest" class="menu__link">Southwest</a></li>
+</ul></li>
+<li class="menu__item is-expanded last expanded menu-mlid-2827"><a href="/supporters/celebrities" class="menu__link">Celebrities</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-19382"><a href="https://www.unicefusa.org/supporters/celebrities/ambassadors" title="" class="menu__link">UNICEF Ambassadors</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-18911"><a href="https://www.unicefusa.org/our-community/athletes/sports-partnerships" title="" class="menu__link">Sports Partnerships</a></li>
+</ul></li>
+</ul></div></li>
+<li class="menu__item is-expanded last expanded menu-mlid-2719"><a href="/about" class="menu__link">about us</a><div class="sub-item-wrap"><ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-2762"><a href="/about/people" class="menu__link">People</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-3119"><a href="/about/people/board" class="menu__link">Board of Directors</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-3118"><a href="/about/people/management" class="menu__link">Senior Management</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-5176"><a href="/about/people/unicef-jobs-and-careers" class="menu__link">Careers</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2763"><a href="/about/offices" class="menu__link">Offices</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-4494"><a href="/about/offices/new-york" class="menu__link">New York (Headquarters)</a></li>
+<li class="menu__item is-leaf is-parent leaf has-children menu-mlid-2855"><a href="/about/offices/atlanta" class="menu__link">Atlanta</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4488"><a href="/about/offices/boston" class="menu__link">Boston</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4495"><a href="/about/offices/chicago" class="menu__link">Chicago</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4498"><a href="/about/offices/dallas" class="menu__link">Dallas</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4504"><a href="/about/offices/houston" class="menu__link">Houston</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4505"><a href="/about/offices/los-angeles" class="menu__link">Los Angeles</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-4490"><a href="/about/offices/san-francisco" class="menu__link">San Francisco</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-5932"><a href="/about/offices/washington-dc-office" class="menu__link">Washington, D.C.</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-3121"><a href="/about/finances" class="menu__link">Finances</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-3662"><a href="/about/finances" title="" class="menu__link">89% of Every $1 Spent Helps Kids</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3660"><a href="https://www.charitynavigator.org/index.cfm?bay=search.summary&amp;orgid=4617" title="" class="menu__link">High Ratings from Charity Navigator</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-19376"><a href="https://www.unicefusa.org/how-understand-unicef-usa%E2%80%99s-charity-watchdog-ratings" title="" class="menu__link">How to understand Charity ratings</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-3659"><a href="/about/publications/annual-report-2019" title="2019 Annual Report" class="menu__link">2019 Annual Report</a></li>
+</ul></li>
+<li class="menu__item is-expanded last expanded menu-mlid-3663"><a href="/about/contact" class="menu__link">Contact Us</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2768"><a href="/about/faq" class="menu__link">Frequently Asked Questions</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3666"><a href="/about/contact/email" class="menu__link">Email</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3664"><a href="https://facebook.com/UNICEFUSA" title="" class="menu__link">Facebook</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3665"><a href="https://twitter.com/UNICEFUSA" title="" class="menu__link">Twitter</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-19405"><a href="https://www.instagram.com/unicefusa/" title="" class="menu__link">Instagram</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-3667"><a href="tel:+18003675437" title="" class="menu__link">(800) 367-5437</a></li>
+</ul></li>
+</ul></div></li>
+</ul></div>
+</div>
+<div id="block-search-form" class="test block block-search even" role="search">
+<form action="/?form=donate" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+<h2 class="element-invisible">Search form</h2>
+<div class="form-item form-type-textfield form-item-search-block-form">
+<label for="edit-search-block-form--2">Search </label>
+<input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--3"><input type="submit" id="edit-submit--3" name="op" value="GO" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-NuAUQQbyYRusWyjK5s9zhCxWvmGMkYCFE-q-mIEagmg" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>
+</div>
+<div id="block-block-127" class="test block block-block last odd">
+<h2 class="block__title block-title">FundraiseUp Patch</h2>
+<style>
+#block-block-127 {
+    display: none;
+}
+
+.modal-table .campaign-text::after {
+    background-image: none !important;
+}
+</style>
+<script>
+document.querySelector('.menu > .menu-mlid-8286 > a').href = "#FUNVJWTZOTR"
+</script>
+</div>
+</div>
+</div>
+</header>
+<div id="page">
+<div id="content" class="column" role="main">
+<div class="panel-display panel-unicef-mixed-layout" id="show-grid">
+
+<div class="panel-panel panel-col-top-feature">
+<div class="inside">
+<div class="panel-pane pane-custom pane-1">
+<script>
+var urlElement = document.querySelector('a.feature-link')
+if (urlElement) {
+var sliced = urlElement.href.split("%23");
+if (sliced.length > 1) {
+var anchor = sliced.slice(-1)[0];
+urlElement.href = '#'+anchor
+}
+}
+</script>
+</div>
+<div class="panel-pane pane-block pane-block-121">
+<style>
+.pane-billboard-feature-billboard-feature-main .feature .container .overlay.standard .main-text {
+    text-transform: uppercase;
+    font-size: 42px;
+    line-height: 40px;
+}
+.pane-billboard-feature-billboard-feature-main .feature .container .overlay.standard .action-button {
+    font-size: 28px;
+    padding: 6px 23px;
+}
+
+ .pane-billboard-feature-billboard-feature-main .feature .container .overlay.standard {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 248px;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    background-color: rgba(255,255,255,.8);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    display: none;
+} 
+
+#page #content .crisis-billboard {
+    background-position: 63% 10%;
+}
+
+@media (max-width: 767px){
+.pane-billboard-feature-billboard-feature-main .feature .container .overlay.standard .main-text {
+    text-transform: uppercase;
+    font-size: 33px;
+    line-height: 40px;
+}
+
+#page a.crisis-billboard__description--action {
+    margin-bottom: 22px !important;
+}
+}
+
+@media (max-width: 967px){
+#page h3.crisis-billboard__description--copy {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: .71px;
+    /* color: #000000!important; */
+    font-family: roboto slab,times new roman,Times,serif;
+    font-weight: 400;
+    text-align: left;
+    margin: 0 0 15px -10px;
+   }
+
+#page a.crisis-billboard__description--action {
+    text-transform: uppercase;
+    font-family: roboto,times new roman,Times,serif;
+    font-weight: 400px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    background: #ef2a24;
+    padding: 15px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 45px;
+}
+
+.crisis-billboard__description {
+    max-width: 150px;
+    padding-left: 20px;
+}
+}
+
+
+.pane-billboard-feature-billboard-feature-main .feature .container .overlay.standard {
+    display: block !important;
+}
+
+
+@media (max-width: 767px) {
+.pane-billboard-feature-billboard-feature-main .view-billboard-feature .feature .container .overlay {
+    position: relative !important;
+}
+}
+
+@media screen and (max-width: 1190px) and (min-width: 768px) {
+.pane-billboard-feature-billboard-feature-main .feature .container .overlay {
+    left: 0 !important;
+}
+}
+</style>
+<style>
+@media (min-width: 768px) {
+.views-field.views-field-nothing.standard-billboard {
+    max-height: 525px;
+}
+
+.feature {
+    height: 525px;
+}
+
+.pane-billboard-feature-billboard-feature-main .feature img {
+    height: 100%;
+    object-fit: cover;
+}
+}
+</style>
+</div>
+<div class="panel-pane pane-views-panes pane-billboard-feature-billboard-feature-main">
+<div class="view view-billboard-feature view-id-billboard_feature view-display-id-billboard_feature_main view-dom-id-f4bf4cdec355b641cd5304c475786c6e">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+<div class="views-field views-field-nothing standard-billboard">
+<span class="field-content">
+<a href="https://www.unicefusa.org/?form=donate" class="feature-link">
+<div class="feature">
+<img typeof="foaf:Image" src="https://www.unicefusa.org/sites/default/files/UNI355828.jpg.homepage.India_flipped%20%281%29%20%281%29.jpg" width="942" height="340" alt="" /> <div class="container">
+<div class="container-inner">
+<div class="feature-xposition">11.1966%</div>
+<div class="feature-yposition">63.3803</div>
+<div class="action-box-width">300</div>
+<div class="overlay standard">
+<div class="emergency-alert">Emergency Alert</div>
+<div class="intro-text"></div>
+<div class="main-text">HELP CHILDREN SURVIVE & THRIVE</div>
+<div class="action-button">DONATE NOW</div>
+</div>
+</div>
+</div>
+<div class="caption-xposition"></div>
+<div class="caption-yposition"></div>
+<div class="photo-credit nothing">
+UNICEF </div>
+</div>
+</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-pane pane-block pane-unicef-blocks-unicef-feature-block">
+<div class="feature-block"><style type="text/css">
+.pane-unicef-blocks-unicef-feature-block {
+    /* padding-top: 15px; */
+  }
+
+  .pane-unicef-blocks-unicef-feature-block .feature-block-text {
+    /* margin-bottom: 0px; */
+  }</style>
+<div class="feature-block-text">Saving Lives, Building Futures</div>
+<div class="feature-block-subtext">UNICEF USA helps <a href="/mission/survival">save</a> and <a href="/mission/protect">protect</a> the world's most vulnerable children. UNICEF USA is&nbsp;<a href="https://www.unicefusa.org/?form=FUNVJWTZOTR">rated one of the best charities to donate to</a>: <a href="https://www.unicefusa.org/about/finances">Less than 3%</a> of every dollar spent goes to administrative costs.&nbsp;</div>
+</div>
+</div>
+<div class="panel-pane pane-custom pane-2">
+<h2 class="pane-title">
+</h2>
+<style>
+.pane-3 .pane-title { display: none; }
+html .experiment-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 999;
+}
+html .experiment-modal .backdrop {
+  background: RGBA(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+html .experiment-modal .interior {
+  background-size: cover;
+  border: 3px solid white;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  min-width: 570px;
+  min-height: 360px;
+  padding-top: 120px;
+  padding-left: 20px;
+  position: relative;
+  top: 50%;
+  text-align: left;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+html .experiment-modal .interior .close {
+  cursor: pointer;
+}
+html .experiment-modal .interior .close:before {
+  content: 'X';
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  line-height: 10px;
+  font-size: 20px;
+}
+html .experiment-modal .interior > section {
+  background-color: white;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px 20px 20px;
+  max-width: 45%;
+}
+html .experiment-modal .interior > section h3 {
+  color: #034262;
+  font-family: roboto slab,times new roman,Times,serif;
+  font-size: 1.6em;
+  margin: 0 0 25px;
+}
+html .experiment-modal .interior > section a {
+  text-decoration: none;
+}
+html .experiment-modal .interior > section a button {
+  background-color: #22b8f1;
+  border: 0;
+  border-radius: 5px !important;
+  color: white;
+  display: block;
+  font-family: "Roboto",helvetica,arial,sans-serif;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 400;
+  padding: 12px 20px;
+  text-transform: uppercase;
+}
+html .experiment-modal.show {
+  display: block;
+}
+html .experiment-modal .interior .close {
+  color: white;
+}
+</style>
+<div class="experiment-modal-container">
+<div class="experiment-modal" id="uusa34-modal">
+<div class="backdrop"></div>
+<div class="interior" style="background-image: url(https://donate.unicefusa.org/page/-/images/help-save-childrens-lives/helpchildrenmodal.jpg)">
+<div class="close"></div>
+<section>
+<h3 class="experiment-modal__header">You can be a hero to children in need!</h3>
+<a class="experiment-modal__cta" href="https://www.unicefusa.org/?form=HealthEmergency">
+<button>Donate Today</button>
+</a>
+</section>
+</div>
+</div>
+</div>
+<script>
+FundraiseUp.on('checkoutOpen', function(details) {
+  jQuery('.experiment-modal').removeClass('show');
+});
+
+jQuery(function() {
+  jQuery('body').prepend('<div id="experiment-modal"><' + '/div' + '>');
+  jQuery('#experiment-modal').append(jQuery('.experiment-modal'));
+  jQuery('body').mouseleave(function() {
+    if (!(sessionStorage.getItem('seenModal')) && !urlParams.has('form')) {
+      jQuery('.experiment-modal').addClass('show');
+      sessionStorage.setItem('seenModal', 'seen')
+}
+  });
+  jQuery('.experiment-modal .close').on('click', function() {
+    jQuery('.experiment-modal').removeClass('show');
+  });
+});
+</script>
+</div>
+</div>
+</div>
+
+<div class="panel-panel panel-col-top-single">
+<div class="inside">
+<div class="panel-pane pane-views-panes pane-billboard-feature-billboard-feature-subitems">
+<div class="view view-billboard-feature view-id-billboard_feature view-display-id-billboard_feature_subitems view-dom-id-6f7aa2163c40e1e95de7309a3f2c2b30">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first">
+<div class="views-field views-field-field-teaser-image">
+<div class="field-content">
+<a href="https://www.unicefusa.org/?form=HelpYemenChildren">
+<img typeof="foaf:Image" src="https://www.unicefusa.org/sites/default/files/styles/home_feature_288x170/public/Yemen-99B51011-7031-493D-958D-4893CA48447E_0.jpg?itok=FQAXQ2bI" width="288" height="170" /> </a>
+</div>
+</div>
+<div class="views-field views-field-field-main-text">
+<div class="field-content">
+<a href="https://www.unicefusa.org/?form=HelpYemenChildren">
+Yemen's children in crisis </a>
+</div>
+</div>
+<div class="views-field views-field-field-action-button-text">
+<div class="field-content">
+<a href="https://www.unicefusa.org/?form=HelpYemenChildren">
+DONATE NOW </a>
+</div>
+</div>
+</div>
+<div class="views-row views-row-2 views-row-even">
+<div class="views-field views-field-field-teaser-image">
+<div class="field-content">
+<a href="https://www.unicefusa.org/mission/emergencies/child-refugees/syria-crisis">
+<img typeof="foaf:Image" src="https://www.unicefusa.org/sites/default/files/styles/home_feature_288x170/public/syria-homepage-crisis-2015_0.jpg?itok=qcvdh__5" width="288" height="170" /> </a>
+</div>
+</div>
+<div class="views-field views-field-field-main-text">
+<div class="field-content">
+<a href="https://www.unicefusa.org/mission/emergencies/child-refugees/syria-crisis">
+Syria: millions of children under siege </a>
+</div>
+</div>
+<div class="views-field views-field-field-action-button-text">
+<div class="field-content">
+<a href="https://www.unicefusa.org/mission/emergencies/child-refugees/syria-crisis">
+help now </a>
+</div>
+</div>
+</div>
+<div class="views-row views-row-3 views-row-odd views-row-last">
+<div class="views-field views-field-field-teaser-image">
+<div class="field-content">
+<a href="https://www.unicefusa.org/mission/covid-19">
+<img typeof="foaf:Image" src="https://www.unicefusa.org/sites/default/files/styles/home_feature_288x170/public/UNI319135-jpg-COVID_.jpg?itok=6ia8L1Rz" width="288" height="170" /> </a>
+</div>
+</div>
+<div class="views-field views-field-field-main-text">
+<div class="field-content">
+<a href="https://www.unicefusa.org/mission/covid-19">
+COVID-19, global health emergency </a>
+</div>
+</div>
+<div class="views-field views-field-field-action-button-text">
+<div class="field-content">
+<a href="https://www.unicefusa.org/mission/covid-19">
+Learn More </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-pane pane-views-panes pane-our-stories-our-stories-feature">
+<h2 class="pane-title">
+<a href="/stories">UNICEF in Action</a> </h2>
+<div class="view view-our-stories view-id-our_stories view-display-id-our_stories_feature view-dom-id-56d32ec26580060a69ef9a9912c65368">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last contextual-links-region">
+<div class="our-stories-feature-image rounded-8">
+<a href="https://www.unicefusa.org/stories/five-years-war-pandemic-sends-yemens-malnutrition-rates-soaring/37852">
+<a href="https://www.unicefusa.org/stories/five-years-war-pandemic-sends-yemens-malnutrition-rates-soaring/37852"><img typeof="foaf:Image" src="https://www.unicefusa.org/sites/default/files/styles/our_stories_460x260/public/field-images/story-teaser/2020/UNI337477.jpg.Thumb_.jpg?itok=MP28lyKX" width="460" height="260" alt="Mohammed Moharram Sa&#039;ad Al-Oshari smiles at his 2-year-old daughter, Bulgis, who is holding a packet of Ready-to-Use Therapeutic Food, used to treat severe malnutrition. " title="Mohammed Moharram Sa&#039;ad Al-Oshari smiles at his 2-year-old daughter, Bulgis, who is holding a packet of Ready-to-Use Therapeutic Food, used to treat severe malnutrition. " /></a> </a>
+</div>
+<div class="our-stories-feature-title"><a href="https://www.unicefusa.org/stories/five-years-war-pandemic-sends-yemens-malnutrition-rates-soaring/37852" title="View">Five Years of War + Pandemic Sends Yemen&#039;s Malnutrition Rates Soaring</a></div>
+<div class="our-stories-feature-description"><a href="https://www.unicefusa.org/stories/five-years-war-pandemic-sends-yemens-malnutrition-rates-soaring/37852">Yemen&#039;s malnutrition crisis prompts UNICEF to issue an urgent appeal for support. At least 98,000 young lives are on the line.</a></div>
+<div class="our-stories-feature-action-link"><a href="https://www.unicefusa.org/stories/five-years-war-pandemic-sends-yemens-malnutrition-rates-soaring/37852">Read More</a></div>
+<div class="views-field views-field-contextual-links"> <span class="field-content"></span> </div> </div>
+</div>
+<div class="attachment attachment-after">
+<div class="view view-our-stories view-id-our_stories view-display-id-our_stories_sub">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first rounded-8 contextual-links-region">
+<div class="our-stories-sub-title">
+<a href="https://www.unicefusa.org/stories/listen-young-voices-world-childrens-day/37854">
+<div class="our-stories-sub-image">
+<img typeof="foaf:Image" src="https://www.unicefusa.org/sites/default/files/styles/our_stories_icon_222x124/public/field-images/story-teaser/2020/UN0356693.jpg.Thumb_.jpg?itok=maoQHWLK" width="222" height="124" alt="Koumba, Jean Uriel, Mariam and Yasmine jump for joy before World Children&#039;s Day 2020 in Abidjan, Côte d&#039;Ivoire. " title="Koumba, Jean Uriel, Mariam and Yasmine jump for joy before World Children&#039;s Day 2020 in Abidjan, Côte d&#039;Ivoire. " /></div>
+<div class="our-stories-sub-left">
+<div class="title">Listen to Young Voices on World Children&#039;s Day</div>
+</div>
+</a>
+</div>
+<div class="views-field views-field-contextual-links"> <span class="field-content"></span> </div> </div>
+<div class="views-row views-row-2 views-row-even rounded-8 contextual-links-region">
+<div class="our-stories-sub-title">
+<a href="https://www.unicefusa.org/stories/2020-recap-unicefs-actions-children-crisis/37825">
+<div class="our-stories-sub-image">
+<img typeof="foaf:Image" src="https://www.unicefusa.org/sites/default/files/styles/our_stories_icon_222x124/public/field-images/story-teaser/2020/thumbnail_3.jpeg?itok=7jkyCJ6H" width="222" height="124" alt="A UNICEF coordinator for COVID-19 awareness program walks through an impoverished neighborhood in Mumbai, India, where UNICEF and partners are improving sanitation and other living conditions to help contain the spread of the virus." title="A UNICEF coordinator for COVID-19 awareness program walks through an impoverished neighborhood in Mumbai, India, where UNICEF and partners are improving sanitation and other living conditions to help contain the spread of the virus." /></div>
+<div class="our-stories-sub-left">
+<div class="title">2020 Recap: UNICEF&#039;s Actions for Children in Crisis</div>
+</div>
+</a>
+</div>
+<div class="views-field views-field-contextual-links"> <span class="field-content"></span> </div> </div>
+<div class="views-row views-row-3 views-row-odd views-row-last rounded-8 contextual-links-region">
+<div class="our-stories-sub-title">
+<a href="https://www.unicefusa.org/stories/covid-19-and-child-labor-time-crisis-time-act/37741">
+<div class="our-stories-sub-image">
+<img typeof="foaf:Image" src="https://www.unicefusa.org/sites/default/files/styles/our_stories_icon_222x124/public/field-images/story-teaser/2020/thumbnail%20child%20labor.jpeg?itok=8byritS2" width="222" height="124" alt="Children work alongside parents at the granite mines in Burkina Faso." title="Children work alongside parents at the granite mines in Burkina Faso." /></div>
+<div class="our-stories-sub-left">
+<div class="title">COVID-19 and Child Labor: A Time of Crisis, A Time To Act</div>
+</div>
+</a>
+</div>
+<div class="views-field views-field-contextual-links"> <span class="field-content"></span> </div> </div>
+</div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel-panel panel-col-body-feature">
+<div class="inside">
+<div class="panel-pane pane-panels-mini pane-homepage-connect-with-us">
+<div class="panel-2col-stacked clearfix panel-display" id="mini-panel-homepage_connect_with_us">
+<div class="panel-col-top panel-panel">
+<div class="inside"><div class="panel-pane pane-entity-field pane-node-field-teardrop-image">
+<img typeof="foaf:Image" src="https://www.unicefusa.org/sites/default/files/styles/teardrop_136x136/public/unicef_block_image/connect-image.png?itok=iRa75dX7" width="136" height="136" />
+</div>
+<div class="panel-pane pane-node-title">
+<h3>Be an Active Supporter</h3>
+</div>
+</div>
+</div>
+<div class="center-wrapper">
+<div class="panel-col-first panel-panel">
+<div class="inside"><div class="panel-pane pane-entity-field pane-node-field-editable-left-area">
+<p>Be the first to know about UNICEF's humanitarian relief efforts in times of emergency.</p>
+</div>
+<div class="panel-pane pane-views-panes pane-editable-region-views-editable-region-referenced-form">
+<div class="view view-editable-region-views view-id-editable_region_views view-display-id-editable_region_referenced_form view-dom-id-d15985b667c7fcc8fedf6971d1ae102c">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+<div class="field-content editable-region-form"><form class="webform-client-form" enctype="multipart/form-data" action="/?form=donate" method="post" id="webform-client-form-66" accept-charset="UTF-8"><div><div class="form-item webform-component webform-component-email webform-container-inline" id="webform-component-mail">
+<label for="edit-submitted-mail">Email Address <span class="form-required" title="This field is required.">*</span></label>
+<input class="email webform form-text form-email required" type="email" id="edit-submitted-mail" name="submitted[mail]" size="60" />
+</div>
+<div class="form-item webform-component webform-component-textfield webform-container-inline" id="webform-component-zip">
+<label for="edit-submitted-zip">Zip </label>
+<input class="new-line form-text" type="text" id="edit-submitted-zip" name="submitted[zip]" value="" size="60" maxlength="128" />
+</div>
+<input class="webform" type="hidden" name="submitted[ms]" value="web_dig_unicefusaorg-default" />
+<input class="webform" type="hidden" name="submitted[cid]" value="" />
+<input class="webform" type="hidden" name="submitted[referrer]" value="" />
+<input class="webform" type="hidden" name="submitted[initial_referrer]" value="" />
+<input class="webform" type="hidden" name="submitted[search_engine]" value="" />
+<input class="webform" type="hidden" name="submitted[search_string]" value="" />
+<input class="webform" type="hidden" name="submitted[user_agent]" value="" />
+<input class="webform" type="hidden" name="submitted[social_referer_transaction]" value="" />
+<input class="" type="hidden" name="submitted[utm_content]" value="" />
+<input class="" type="hidden" name="submitted[utm_medium]" value="" />
+<input class="" type="hidden" name="submitted[utm_campaign]" value="" />
+<input class="" type="hidden" name="submitted[utm_source]" value="" />
+<input class="" type="hidden" name="submitted[utm_term]" value="" />
+<input class="" type="hidden" name="submitted[initialms]" value="" />
+<input class="" type="hidden" name="submitted[form]" value="E-mail Signup - Homepage" />
+<input class="" type="hidden" name="submitted[form_url]" value="https://www.unicefusa.org/home" />
+<input class="" type="hidden" name="submitted[e_mail_opt_in]" value="1" />
+<input class="" type="hidden" name="submitted[ftouch]" value="" />
+<input class="" type="hidden" name="submitted[device_type]" value="" />
+<input class="" type="hidden" name="submitted[device_name]" value="" />
+<input class="" type="hidden" name="submitted[device_os]" value="" />
+<input class="" type="hidden" name="submitted[device_browser]" value="" />
+<input type="hidden" name="details[sid]" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<input type="hidden" name="form_build_id" value="form-JNaq8xNznlneFbzu_tDb-S7r53unxOriBsZh2lMRxys" />
+<input type="hidden" name="form_id" value="webform_client_form_66" />
+<div class="form-actions form-wrapper" id="edit-actions"><input class="btn form-submit" type="submit" id="edit-submit" name="op" value="sign up" /></div></div></form></div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-col-last panel-panel">
+<div class="inside"><div class="panel-pane pane-entity-field pane-node-field-editable-right-area">
+<div class="item-list-image"><div class="left-image"><a href="https://facebook.com/UNICEFUSA"><img alt="Facebook" src="/sites/default/files/facebook-79x79.png" /></a></div>
+<div class="right-content"><div class="item-title"><a href="https://facebook.com/UNICEFUSA">UNICEF USA on Facebook</a></div>
+<div class="item-description">Join our community of supporters working to save children's lives.</div>
+<div class="item-link"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Funicefusa&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=230214117148115" style="border:none; overflow:hidden; height:21px;"></iframe></div>
+</div>
+</div>
+<div class="item-list-image"><div class="left-image"><a href="https://twitter.com/UNICEFUSA"><img alt="Facebook" src="/sites/default/files/twitter-79x79.png" /></a></div>
+<div class="right-content"><div class="item-title"><a href="https://twitter.com/UNICEFUSA">@UNICEFUSA on Twitter</a></div>
+<div class="item-description">Be part of the conversation about children's issues around the world.</div>
+<div class="item-link"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="//platform.twitter.com/widgets/follow_button.html?screen_name=unicefusa&amp;show_count=true&amp;lang=en&amp;show_screen_name=true&amp;dnt=true" style="width:100%; height:20px;"></iframe></div>
+</div>
+</div>
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<footer id="footer">
+<div id="footer-top">
+<div class="inner">
+<div class="region region-footer-top">
+<div id="block-menu-block-3" class="test block block-menu-block first odd" role="navigation">
+<div class="menu-block-wrapper menu-block-3 menu-name-menu-footer-main-menu parent-mlid-0 menu-level-1">
+<ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-5586"><a href="/mission" title="" class="menu__link">our mission</a><div class="sub-item-wrap"><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-11521"><a href="/donate/nepal-earthquake-help-children-now/24226" title="" class="menu__link">Nepal Earthquake</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6806"><a href="/mission/survival/ebola" title="" class="menu__link">Ebola</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6811"><a href="/mission/emergencies/child-refugees-and-migrants/iraq-crisis" title="" class="menu__link">Iraq</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6816"><a href="/mission/emergencies/child-refugees-and-migrants/syria-crisis" title="" class="menu__link">Syria</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5611"><a href="/mission/emergencies" title="" class="menu__link">Emergency Relief</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5601"><a href="/mission/survival" title="" class="menu__link">Saving Lives</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6821"><a href="/mission/protect/education" title="" class="menu__link">Education</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-5621"><a href="/mission/usa" title="" class="menu__link">UNICEF USA Initiatives</a></li>
+</ul></div></li>
+<li class="menu__item is-expanded expanded menu-mlid-5591"><a href="/supporters" title="" class="menu__link">our supporters</a><div class="sub-item-wrap"><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-5626"><a href="/supporters/donors" title="" class="menu__link">Donors</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5636"><a href="/supporters/organizations" title="" class="menu__link">Organizations</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5641"><a href="/supporters/regional" title="" class="menu__link">Regional Communities</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5646"><a href="/supporters/celebrities" title="" class="menu__link">Celebrities</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5961"><a href="/user-events-list" class="menu__link">User Events</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-18132"><a href="https://secure.unicefusa.org/user" title="Sign-in here to manage your monthly donation" class="menu__link">Are you a Guardian Circle member? Sign in here.</a></li>
+</ul></div></li>
+<li class="menu__item is-expanded last expanded menu-mlid-5596"><a href="/about" title="" class="menu__link">about us</a><div class="sub-item-wrap"><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-5661"><a href="/about/finances" title="" class="menu__link">Finances</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5666"><a href="/about/contact" title="" class="menu__link">Contact Us</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5651"><a href="/about/people" title="" class="menu__link">People</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-5656"><a href="/about/offices" title="" class="menu__link">Offices</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-18134"><a href="https://www.unicefusa.org/about/site/privacy" title="https://www.unicefusa.org/about/site/privacy" class="menu__link">Privacy Policy</a></li>
+</ul></div></li>
+</ul></div>
+</div>
+<div id="block-menu-block-6" class="test block block-menu-block even" role="navigation">
+<div class="menu-block-wrapper menu-block-6 menu-name-menu-footer-media-menu parent-mlid-0 menu-level-1">
+<ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-819"><a href="/stories" title="" class="menu__link">Stories of UNICEF in Action »</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-820"><a href="/press" title="" class="menu__link">Media Hub »</a></li>
+</ul></div>
+</div>
+<div id="block-unicef-blocks-unicef-footer-responsive-donate" class="test block block-unicef-blocks odd">
+<div class="footer-donate"><a href="/donate/donate-end-preventable-deaths-children">Donate</a>
+</div>
+</div>
+<div id="block-unicef-blocks-unicef-bottom-footer-social" class="test block block-unicef-blocks last even">
+<div class="footer-social"><div class="ss-icon">
+<a class="social-link ss-facebook first" href="https://facebook.com/UNICEFUSA"></a>
+<a class="social-link ss-twitter" href="https://twitter.com/UNICEFUSA"></a>
+<a class="social-link ss-linkedin" href="https://www.linkedin.com/company-beta/22762/"></a>
+<a class="social-link ss-youtube" href="https://youtube.com/UNICEFUSA"></a>
+<a class="social-link ss-instagram" href="https://instagram.com/UNICEFUSA"></a>
+<a class="social-link ss-pinterest last" href="https://pinterest.com/UNICEFUSA"></a>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer-bottom">
+<div class="inner">
+<div class="region region-footer-bottom">
+<div id="block-unicef-blocks-unicef-bottom-footer" class="test block block-unicef-blocks first odd">
+<div class="footer-text"><div>(800) 367-5437 | 125 Maiden Lane, New York, NY 10038.<br>© 2020 U.S. Fund for UNICEF d/b/a UNICEF USA. All rights reserved.</div>
+</div>
+</div>
+<div id="block-menu-block-4" class="test block block-menu-block last even" role="navigation">
+<div class="menu-block-wrapper menu-block-4 menu-name-menu-footer-info-menu parent-mlid-0 menu-level-1">
+<ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-509"><a href="/about/faq" title="" class="menu__link">FAQ</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3116"><a href="/about/contact" title="" class="menu__link">Contact</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-511"><a href="/about/site/map" title="" class="menu__link">Site Map</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-5181"><a href="/about/people/unicef-jobs-and-careers" title="" class="menu__link">Jobs</a></li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://www.unicefusa.org/sites/default/files/js/js_7Ukqb3ierdBEL0eowfOKzTkNu-Le97OPm-UqTS5NENU.js"></script>
+<script src="https://s7.addthis.com/js/250/addthis_widget.js"></script>
+<script src="https://www.unicefusa.org/sites/default/files/js/js_BmrJETtaOJF652MH_7nSv0Fxt3eSrhSX5S-9NqwjDQY.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c064680dbb","applicationID":"44757233","transactionName":"YwdVNxECCkcEUBYNV1pNdBYQFwtZSkMDA11rD1YNAgQBRjpDAwNdawdPBgAWEFFKQwMDXRkKWA4GEwVTAA==","queueTime":0,"applicationTime":1524,"atts":"T0BWQVkYGUk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
