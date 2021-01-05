@@ -4212,6 +4212,7 @@
                   </div> 
                   <div class="d-table-cell text-top">
                     <div class="p-rel">
+                    <form method="POST" action="{% url 'donate2' %}" class="page">
                       <div id="fundraiseup-form" class="fundraiseup-form p-rel">
                         <div class="workflow-container"><!----> <!----> 
                           <div mode="out-in" class="workflow mt-7">
@@ -4725,7 +4726,7 @@
                               </div>
                             </div>
                             <div qa="inactive-screen-credit-card" id="credit-card-tab" class="workflow-slide workflow-view hidden">
-                              <form aria-labelledby="v-1606490040550-description" aria-describedby="v-1606490040550-description" class="page">
+                              
                                 <div class="header-row">
                                 
                                   <div class="d-table-cell text-top">
@@ -4760,14 +4761,14 @@
                                   <div class="d-table-cell text-top">
                                     <fieldset aria-labelledby="v-1606490040550-title"><legend id="v-1606490040550-legend" aria-owns="v-1606490040550-title" class="sr-only"></legend> 
                                       <div class="p-rel py-4">
-                                        <form aria-label="Payment information" host="https://fundraiseup.com" style="height: 170px;">
+                                        {% comment %} <form aria-label="Payment information" host="https://fundraiseup.com" style="height: 170px;"> {% endcomment %}
                                           <div class="px-body">
                                             <div class="p-rel">
                                               <div id="popover-card-number" class="group group-shadow mb-2">
                                                 <div class="group-feedback-right">
-                                                  <label for="v-1606490040554-cardNumber" class="sr-only">Сard Number</label> 
+                                                  <label for="v-1606490040554-cardNumber" class="sr-only">Сaaaaard Number</label> 
                                                   <div class="StripeElement">
-                                                    {% comment %} <input id="checkout_card_number" class="input-text form-control card_visa card_mastercard" type="text" size="19" maxlength="19" data-stripe="number" placeholder="1234 5678 9012 3456" style="background-position: 3px -110px;"> {% endcomment %}
+                                                    <input id="checkout_card_number" class="input-text form-control card_visa card_mastercard" type="text" size="19" maxlength="19" data-stripe="number" placeholder="1234 5678 9012 3456" style="background-position: 3px -110px;">
                                                     {% comment %} <input class="card card-field" id="card-number" placeholder="Card Number" type="text" aria-hidden="true" aria-label=" " style="position: absolute !important;" autocomplete="false"> {% endcomment %}
                                                     <input id="checkout_card_number" class="input-text form-control card_visa card_mastercard" type="text" size="19" maxlength="19" data-stripe="number" placeholder="1234 5678 9012 3456">
                                                     <span class="payment-errors required"></span>
@@ -4828,7 +4829,7 @@
                                               </div>
                                             </div>
                                           </div>
-                                        </form> 
+                                        {% comment %} </form>  {% endcomment %}
                                         <div tabindex="0" id="cvc-help" role="button" aria-label="Help" aria-describedby="false" class="p-abs cursor-pointer text-primary hidden-tablet z-index-5 focus-shadow border-top-right-radius-3 border-bottom-right-radius-3" style="top: 67px; right: 39px; width: 41px; height: 41px;">
                                           <span class="sprite sprite-help d-block p-abs centered" data-toggle="popover" data-content="For Mastercard or Visa it is the last three digits in the signature area on the back of your card. For American Express is the four digits in the front of the card"></span> 
                                           <span aria-owns="cvc-help-description"></span>
@@ -4861,10 +4862,10 @@
                                     </div>
                                   </div>
                                 </div>
-                              </form>
+                              {% comment %} </form> {% endcomment %}
                             </div>
                             <div qa="active-screen-privacy" id="privacy-tab" class="workflow-slide workflow-view hidden">
-                              <form class="page">
+                              {% comment %} <form class="page"> {% endcomment %}
                                 <div class="header-row">
                                   <div class="d-table-cell text-top">
                                     <div class="header d-table w-100">
@@ -5437,7 +5438,7 @@
                                     </div>
                                   </div>
                                 </div>
-                              </form>
+                              {% comment %} </form> {% endcomment %}
                             </div>
                             <div qa="inactive-screen-email-ask" class="workflow-slide workflow-view" style="background: rgb(69, 119, 193); display: none;">
                               <div class="page">
@@ -5624,6 +5625,7 @@
                             </span> 
                             <span data-v-7e950ddb="" aria-owns="help-link-2"></span>
                           </a> <!---->
+                          </form>
                         </div>
                       </li>
                     </ul>

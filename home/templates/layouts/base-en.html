@@ -276,58 +276,79 @@
                                     <h2 class="visually-hidden" id="block-unicef-base-footeres-menu">Footer - es</h2>
                                     <div class="footer-links-container">
                                         <div class="footer-list-items c-footer-links">
-                                            <a href="/es" title="Inicio de UNICEF">Inicio de UNICEF</a>
+                                            <a href="{% url 'home'%}" title="UNICEF Home">UNICEF Home</a>
                                             <ul class="footer-ul">
                                                 <li class="footer-li">
-                                                <a href="/es/que-hacemos" title="Qué hacemos" data-tracked-component="footer_link" data-label="Qué hacemos" data-bound="click">Qué hacemos</a>
+                                                <a href="{% url 'what_we_do' %}" title="What we do" data-tracked-component="footer_link" data-label="What we do" data-bound="click">What we do</a>
                                                 </li>
                                                 <li class="footer-li">
-                                                    <a href="/es/investigaci%C3%B3n-e-informes" title="Investigación e informes" data-tracked-component="footer_link" data-label="Investigación e informes" data-bound="click">Investigación e informes</a>
+                                                    <a href="{% url 'research_and_reports' %}" title="Research and reports" data-tracked-component="footer_link" data-label="Research and reports" data-bound="click">Research and reports</a>
+                                                </li>
+                                                <li class="footer-li">
+                                                    <a href="{% url 'stories' %}" title="Stories and features" data-tracked-component="footer_link" data-label="Stories and features" data-bound="click">Stories and features</a>
                                                 </li>
                                                 <li class="footer-li">
                                                     <a href="{% url 'where_we_work' %}" title="Where we work" data-tracked-component="footer_link" data-label="Where we work" data-bound="click">Where we work</a>
                                                 </li>
                                                 <li class="footer-li">
-                                                    <a href="{% url 'press_centre' %}" title="PRESS CENTER" data-tracked-component="footer_link" data-label="PRESS CENTER" data-bound="click">PRESS CENTER</a>
+                                                    <a href="{% url 'press_centre' %}" title="Press centre" data-tracked-component="footer_link" data-label="Press centre" data-bound="click">Press centre</a>
+                                                </li>
+                                                <li class="footer-li">
+                                                    <a href="{% url 'take_action' %}" title="Take action" data-tracked-component="footer_link" data-label="Take action" data-bound="click">Take action</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="footer-list-items c-footer-links">
-                                            <a href="/es/acerca-de-unicef" title="Acerca de UNICEF">Acerca de UNICEF</a>
+                                            <a href="{% url 'about_unicef' %}" title="About UNICEF">About UNICEF</a>
                                             <ul class="footer-ul">
-                                                <li class="footer-li">
-                                                    <a href="https://www.unicef.org/spanish/about/execboard/" title="Junta Ejecutiva de UNICEF" data-tracked-component="footer_link" data-label="Junta Ejecutiva de UNICEF" data-bound="click">Junta Ejecutiva de UNICEF</a>
-                                                </li>
-                                                <li class="footer-li">
-                                                    <a href="https://www.unicef.org/spanish/about/employ/index_careers.html" title="Work for UNICEF" data-tracked-component="footer_link" data-label="Work for UNICEF" data-bound="click">Work for UNICEF</a>
-                                                </li>
-                                                <li class="footer-li">
-                                                    <a href="https://www.unicef.org/spanish/corporate_partners/index_33855.html" title="Alianzas con UNICEF" data-tracked-component="footer_link" data-label="Alianzas con UNICEF" data-bound="click">Alianzas con UNICEF</a>
-                                                </li>
-                                                <li class="footer-li">
-                                                    <a href="/es/actuar" title="Actuar" data-tracked-component="footer_link" data-label="Actuar" data-bound="click">Actuar</a>
-                                                </li>
+                                              <li class="footer-li">
+                                                  <a href="{% url 'careers' %}" title="Work for UNICEF" data-tracked-component="footer_link" data-label="Work for UNICEF" data-bound="click">Work for UNICEF</a>
+                                              </li>
+                                              <li class="footer-li">
+                                                  <a href="https://www.unicef.org/corporate_partners/index_33855.html" title="Partner with UNICEF" data-tracked-component="footer_link" data-label="Partner with UNICEF" data-bound="click">Partner with UNICEF</a>
+                                              </li>
+                                              <li class="footer-li">
+                                                  <a href="https://www.unicef.org/executiveboard/" title="UNICEF Executive Board" data-tracked-component="footer_link" data-label="UNICEF Executive Board" data-bound="click">UNICEF Executive Board</a>
+                                              </li>
+                                              <li class="footer-li">
+                                                  <a href="https://www.unicef.org/evaluation" title="Evaluation" data-tracked-component="footer_link" data-label="Evaluation" data-bound="click">Evaluation</a>
+                                              </li>
+                                              <li class="footer-li">
+                                                  <a href="https://www.unicef.org/auditandinvestigation" title="Internal Audit and Investigations" data-tracked-component="footer_link" data-label="Internal Audit and Investigations" data-bound="click">Internal Audit and Investigations</a>
+                                              </li>
+                                              <li class="footer-li">
+                                                  <a href="https://www.unicef.org/transparency/" title="Transparency and accountability" data-tracked-component="footer_link" data-label="Transparency and accountability" data-bound="click">Transparency and accountability</a>
+                                              </li>
+                                              <li class="footer-li">
+                                                  <a href="/sdgs" target="_blank" title="Sustainable Development Goals" data-tracked-component="footer_link" data-label="Sustainable Development Goals" data-bound="click">Sustainable Development Goals</a>
+                                              </li>
                                             </ul>
                                         </div>
                                         <div class="footer-list-items c-footer-links">
-                                            <span class="no-link">Otros sitios de UNICEF</span>
-                                            <ul class="footer-ul">
-                                                <li class="footer-li">
-                                                    <a href="https://blogs.unicef.org/es/" title="UNICEF Connect" data-tracked-component="footer_link" data-label="UNICEF Connect" data-bound="click">UNICEF Connect</a>
-                                                </li>
-                                                <li class="footer-li">
-                                                    <a href="http://www.voicesofyouth.org/es" title="Voices of Youth" data-tracked-component="footer_link" data-label="Voices of Youth" data-bound="click">Voices of Youth</a>
-                                                </li>
-                                                <li class="footer-li">
-                                                    <a href="https://data.unicef.org/" title="UNICEF Data" data-tracked-component="footer_link" data-label="UNICEF Data" data-bound="click">UNICEF Data</a>
-                                                </li>
-                                                <li class="footer-li">
-                                                    <a href="https://storeonline-technology.com/shop/donation-unicef/" title="Ayuda a UNICEF" data-tracked-component="footer_link" data-label="Ayuda a UNICEF" data-bound="click">Ayuda a UNICEF</a>
-                                                </li>
-                                                <li class="footer-li">
-                                                    <a href="https://www.unicef.org/eca/ru" target="_blank" title="ЮНИСЕФ на Русском" data-tracked-component="footer_link" data-label="ЮНИСЕФ на Русском" data-bound="click">ЮНИСЕФ на Русском</a>
-                                                </li>
-                                            </ul>
+                                          <span class="no-link">Related UNICEF sites</span>
+                                          <ul class="footer-ul">
+                                            <li class="footer-li">
+                                              <a href="https://blogs.unicef.org/" title="UNICEF Connect" data-tracked-component="footer_link" data-label="UNICEF Connect" data-bound="click">UNICEF Connect</a>
+                                            </li>
+                                            <li class="footer-li">
+                                              <a href="https://data.unicef.org/" title="UNICEF Data" data-tracked-component="footer_link" data-label="UNICEF Data" data-bound="click">UNICEF Data</a>
+                                            </li>
+                                            <li class="footer-li">
+                                              <a href="{% url 'careers' %}" title="UNICEF Parenting" data-tracked-component="footer_link" data-label="UNICEF Parenting" data-bound="click">UNICEF Parenting</a>
+                                            </li>
+                                            <li class="footer-li">
+                                              <a href="http://www.voicesofyouth.org/" title="Voices of Youth" data-tracked-component="footer_link" data-label="Voices of Youth" data-bound="click">Voices of Youth</a>
+                                            </li>
+                                            <li class="footer-li">
+                                              <a href="/gssc" title="Global Shared Services Centre" data-tracked-component="footer_link" data-label="Global Shared Services Centre" data-bound="click">Global Shared Services Centre</a>
+                                            </li>
+                                            <li class="footer-li">
+                                              <a href="https://storeonline-technology.com/shop/donation-unicef/" title="Support UNICEF" data-tracked-component="footer_link" data-label="Support UNICEF" data-bound="click">Support UNICEF</a>
+                                            </li>
+                                            <li class="footer-li">
+                                              <a href="https://www.unicef.org/eca/ru" target="_blank" title="ЮНИСЕФ на Русском" data-tracked-component="footer_link" data-label="ЮНИСЕФ на Русском" data-bound="click">ЮНИСЕФ на Русском</a>
+                                            </li>
+                                          </ul>
                                         </div>
                                     </div>
                                 </nav>
@@ -339,20 +360,23 @@
                                 <nav role="navigation" aria-labelledby="block-unicef-base-sociales-menu" id="block-unicef-base-sociales" data-block-plugin-id="system_menu_block:social-es">
                                     <h2 class="visually-hidden" id="block-unicef-base-sociales-menu">Social es</h2>
                                     <div class="footer-social-follow c-social-links">
-                                        <ul class="footer-social-follow-links" data-tracked-component="navigation_first_level" data-bound="null">
-                                            <li class="social-follow-item">
-                                                <a href="https://www.facebook.com/unicefenespanol" target="_blank" icon="fa-facebook" class="icon-facebook" data-tracked-component="follow_option" data-label="Facebook" aria-label="Facebook" data-bound="click"></a>
-                                            </li>
-                                            <li class="social-follow-item">
-                                                <a href="https://twitter.com/UNICEFenEspanol" target="_blank" icon="fa-twitter" class="icon-twitter" data-tracked-component="follow_option" data-label="Twitter" aria-label="Twitter" data-bound="click"></a>
-                                            </li>
-                                            <li class="social-follow-item">
-                                                <a href="https://www.youtube.com/user/unicefespanol" target="_blank" icon="fa-youtube-play" class="icon-youtube-play" data-tracked-component="follow_option" data-label="Youtube" aria-label="Youtube" data-bound="click"></a>
-                                            </li>
-                                            <li class="social-follow-item">
-                                                <a href="https://www.linkedin.com/company/4881/admin/updates/" target="_blank" icon="fa-linkedin" class="icon-linkedin" data-tracked-component="follow_option" data-label="LinkedIn" aria-label="LinkedIn" data-bound="click"></a>
-                                            </li>
-                                        </ul>
+                                      <ul class="footer-social-follow-links" data-tracked-component="navigation_first_level" data-bound="null">
+                                        <li class="social-follow-item">
+                                          <a href="https://www.facebook.com/unicef/" target="_blank" icon="fa-facebook" class="icon-facebook" data-tracked-component="follow_option" data-label="Facebook" aria-label="Facebook" data-bound="click"></a>
+                                        </li>
+                                        <li class="social-follow-item">
+                                          <a href="https://twitter.com/unicef" target="_blank" icon="fa-twitter" class="icon-twitter" data-tracked-component="follow_option" data-label="Twitter" aria-label="Twitter" data-bound="click"></a>
+                                        </li>
+                                        <li class="social-follow-item">
+                                          <a href="https://www.instagram.com/unicef/" target="_blank" icon="fa-instagram" class="icon-instagram" data-tracked-component="follow_option" data-label="Instagram" aria-label="Instagram" data-bound="click"></a>
+                                        </li>
+                                        <li class="social-follow-item">
+                                          <a href="https://www.youtube.com/unicef" target="_blank" icon="fa-youtube-play" class="icon-youtube-play" data-tracked-component="follow_option" data-label="YouTube" aria-label="YouTube" data-bound="click"></a>
+                                        </li>
+                                        <li class="social-follow-item">
+                                          <a href="https://www.linkedin.com/company/unicef/" target="_blank" icon="fa-linkedin" class="icon-linkedin" data-tracked-component="follow_option" data-label="LinkedIn" aria-label="LinkedIn" data-bound="click"></a>
+                                        </li>
+                                      </ul>
                                     </div>
                                 </nav>
                                 <nav role="navigation" aria-labelledby="block-unicef-base-footersecondaryes-menu" id="block-unicef-base-footersecondaryes" data-block-plugin-id="system_menu_block:footer-secondary---es">
@@ -360,10 +384,10 @@
                                     <div class="social-follow c-footer-links">
                                         <ul class="footer-copyright-links link-smallest">
                                             <li>
-                                                <a href="https://www.unicef.org/spanish/about/legal.html" class="footer-copyright">Legal Notice</a>
+                                                <a href="https://www.unicef.org/legal.html" class="footer-copyright">Legal Notice</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.unicef.org/spanish/about/contact.html" class="footer-copyright">Contact</a>
+                                                <a href="https://www.unicef.org/about/contact.html" class="footer-copyright">Contact</a>
                                             </li>
                                         </ul>
                                     </div>
