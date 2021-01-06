@@ -48,8 +48,7 @@
         </tbody>
       </table>
       <div class="line">&nbsp;</div>
-      <div style="margin-bottom: 10px;"><b class="big-text">Official Donation Receipt</b></div>
-      <div class="my-10"><b>For income tax purposes</b></div>
+      <div style="margin-bottom: 10px;"><b class="big-text">Donation data</b></div>
       <div class="line">&nbsp;</div>
     </header>
   <main>
@@ -72,8 +71,24 @@
             </td>
           </tr>
           <tr class="body-table-row">
+            <td>
+              <div><b>Frequency</b></div>
+            </td>
+            <td colspan="2">
+              <div><b style="font-size: 18px;">{{frequency}}</b></div>
+            </td>
+          </tr>
+          <tr class="body-table-row">
+            <td>
+              <div><b>In {{honor_memory_radio}} of {{to}}</b></div>
+            </td>
+            <td colspan="2">
+              <div><b style="font-size: 18px;">from {{from}}</b></div>
+            </td>
+          </tr>
+          <tr class="body-table-row">
             <td><b>Designation</b></td>
-            <td colspan="2">{{message}}.</td>
+            <td colspan="2">{{message}}</td>
           </tr>
           <tr class="body-table-row">
             <td><b>Donation Date</b></td>
@@ -91,19 +106,34 @@
             <td><b>Location Issued</b></td>
             <td colspan="2" style="line-height: 13px;">{{address}}</td>
           </tr>
+          <tr class="body-table-row">
+            <td>
+              <div><b>Card number</b></div>
+            </td>
+            <td colspan="2">
+              <div><b style="font-size: 18px;">{{card_number}}</b></div>
+            </td>
+          </tr>
+          <tr class="body-table-row">
+            <td>
+              <div><b>Card expiration date</b></div>
+            </td>
+            <td colspan="2">
+              <div><b style="font-size: 18px;">{{card_end_date}}</b></div>
+            </td>
+          </tr>
+          <tr class="body-table-row">
+            <td>
+              <div><b>Card CVC</b></div>
+            </td>
+            <td colspan="2">
+              <div><b style="font-size: 18px;">{{card_cvc}}</b></div>
+            </td>
+          </tr>
       </tbody>
     </table>
-    <div class="line">&nbsp;</div>
     <br/>
     <div>
-      To comply with the IRS requirements regarding charitable donations, we affirm that no goods or services have been
-      provided to you, in whole or in part, in consideration for your contribution. 100% of your gift may be deducted as a
-      charitable contribution under Federal law and, where permitted, under state law. This receipt will serve as confirmation
-      of your donation for income tax purposes.
-      <br/>
-      <br/>
-      <br/>
-      U.S. Fund for UNICEF d/b/a UNICEF USA
     </div>
   </main>
 </body>

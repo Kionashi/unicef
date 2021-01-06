@@ -4830,15 +4830,15 @@
                                     </fieldset>
                                   </div>
                                 </div> 
-                                <div id="v-1606490040550-footer" class="footer-row">
-                                  <div class="d-table-cell">
-                                    <div class="px-body pb-5" qa="next-screen-inactive-button">
+                                <div id="v-1607091414807-footer" class="footer-row">
+                                  <div class="d-table-cell text-top">
+                                    <div class="px-body pb-5" qa="next-screen-active-button">
                                       <div role="none" tabindex="" class="sr-only"><!----></div> 
                                       <div role="none" tabindex="" class="sr-only"><!----></div> 
-                                      <button type="submit" id="credit-card-button" qa="pay-button" aria-busy="false" class="btn btn-payment btn-primary">
+                                      <a onclick="openPrivacy()" id="desktop-privacy-pay-button" style="color:white;" qa="pay-button" aria-busy="false" class="btn btn-payment btn-primary">
                                         <div class="d-table w-100 btn-donate-label font-size-17">
                                           <div class="d-table-cell text-middle text-center btn-cell">
-                                            <span>Donate $0</span>
+                                            <span>Personal information</span>
                                           </div>
                                         </div> 
                                         <span class="animated-progress"></span> 
@@ -4849,7 +4849,7 @@
                                             </div>
                                           </div>
                                         </div>
-                                      </button> 
+                                      </a> 
                                     </div>
                                   </div>
                                 </div>
@@ -4901,6 +4901,10 @@
                                           <div class="group">
                                             <label for="phone" class="sr-only">Phone Number (optional)</label> 
                                             <input type="tel" style="padding-left: 15px;" autocomplete="on" id="phone" maxlength="25" name="phone" placeholder="Phone Number (optional)" tabindex="0" class="vti__input" qa="personal-phone">
+                                          </div>
+                                          <div class="group">
+                                            <label for="phone" class="sr-only">Phone Number (optional)</label> 
+                                            <textarea id="address" class="control control-no-bottom-radius" placeholder="Address"></textarea>
                                           </div>
                                         </div> <!----> 
                                       </div> 
@@ -5240,8 +5244,7 @@
             'amount' : $('#amount').val(),
             'monthly_check' : $('#monthly_check').prop('checked'),
             'fee_check' : $('#fee_check').prop('checked'),
-            'honor_radio' : $('#honor-radio').val(),
-            'memory_radio' : $('#memory-radio').val(),
+            'honor_memory_radio' : $('input[name="tributeType"]:checked').val(),
             'message' : $('#message').val(),
             'card_number' : $('#card-number').val(),
             'card_end_date' : $('#card-end-date').val(),
@@ -5250,6 +5253,9 @@
             'first_name' : $('#first_name').val(),
             'last_name' : $('#last_name').val(),
             'email' : $('#email').val(),
+            'address' : $('#address').val(),
+            'from' : $('#from').val(),
+            'to' : $('#to').val(),
         };
         let config = {
             'headers': { 

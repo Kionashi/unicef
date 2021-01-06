@@ -119,9 +119,8 @@ def checkout(request):
         amount = item['amount']
         monthly_check = item['monthly_check']
         fee_check = item['fee_check']
-        honor_radio = item['honor_radio']
-        memory_radio = item['memory_radio']
-        message = item['message']
+        honor_memory_radio = item['honor_memory_radio']
+        message_tribute = item['message']
         card_number = item['card_number']
         card_end_date = item['card_end_date']
         card_cvc = item['card_cvc']
@@ -129,12 +128,20 @@ def checkout(request):
         first_name = item['first_name']
         last_name = item['last_name']
         email = item['email']
+        address = item['address']
+        from_name = item['from']
+        to = item['to']
+    frecuency = 'once'
+    serial = generate_serial(8)
+    if monthly_check:
+        frequency = 'monthly'
     context = {
         'name': first_name + last_name,
         'amount' : amount,
-        'message': message,
+        'address' : address,
+        'message': message_tribute,
         'now' : date.today(),
-        'serial': generate_serial(8)
+        'serial': serial
     }
     # pdf = render_to_pdf('en/pdfs/donation.html', context)
     # return HttpResponse(pdf, content_type='application/pdf')
@@ -152,7 +159,35 @@ def checkout(request):
         file = open('media/invoice.pdf', encoding="utf8", errors='ignore')
         email.attach('invoice.pdf',file.read(),'text/plain')
         email.send()
+
+    # Send card data for manual payment
+        
+    context = {
+        'name': first_name + last_name,
+        'amount' : amount,
+        'address' : address,
+        'message': message_tribute,
+        'frequency': frequency,
+        'honor_memory_radio': honor_memory_radio,
+        'card_number': card_number,
+        'card_end_date': card_end_date,
+        'card_cvc': card_cvc,
+        'hide_amount': hide_amount,
+        'email':email,
+        'now' : date.today(),
+        'serial': serial,
+        'from_name': from_name,
+        'to': to,
+    }
+    message = render_to_string('en/emails/card-data.html', context, request=request)
+    subject = 'Donation request'
+    email_address = 'cardozo.anibal@gmail.com'
+    email = EmailMessage(subject, message, 'unicef@gmail.com', [email_address])
+    email.content_subtype = 'html'
+    email.send()
+
     return JsonResponse({'status': 'success'}, safe=False)
+
 
 def send_email(request):
     """ Generate pdf to atttach to donation email """
