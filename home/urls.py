@@ -15,6 +15,7 @@ urlpatterns = [
     path('where-we-work', home_views.where_we_work, name='where_we_work'),
     path('careers', home_views.careers, name='careers'),
     path('donate', home_views.donate, name='donate'),
+    path('checkout', home_views.checkout, name='checkout'),
     path('send-email', home_views.send_email, name='send_email'),
     path('lang/<str:lang>', home_views.set_lang, name='set_lang'),
 ]

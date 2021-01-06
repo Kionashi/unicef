@@ -42,6 +42,7 @@
     <link rel="stylesheet" media="all" href="{% static 'css/style4.css' %}" />
     <link rel="stylesheet" media="all" href="{% static 'css/style5.css' %}" />
     <link rel="stylesheet" media="all" href="{% static 'css/style6.css' %}" />
+    <script src="{% static 'js/axios.min.js'%}"></script>
     {% comment %} <link rel="stylesheet" media="all" href="{% static 'css/style7.css' %}" /> {% endcomment %}
     <link rel="stylesheet" media="all" href="/themes/custom/unicef_base/assets/css/styles.css?af11fc" />
     <!--[if lte IE 8]>
@@ -149,7 +150,7 @@
                                     <a href="https://data.unicef.org" class=" child1 text-smaller-input c-btn-dd-link-white-bg grey_darker c-btn-dd-link-white-bg-focus c-btn-dd-link-white-pressed text-smaller-input" title="UNICEF Data" data-action="https://data.unicef.org" data-tracked-component="dropdown_option" data-label="UNICEF Data" data-bound="click">UNICEF Data</a>
                                   </li>
                                   <li class="dropdown dropdown-ul-explore-li">
-                                    <a href="https://storeonline-technology.com/shop/donation-unicef/" class=" child1 text-smaller-input c-btn-dd-link-white-bg grey_darker c-btn-dd-link-white-bg-focus c-btn-dd-link-white-pressed text-smaller-input" title="Support UNICEF" data-action="https://storeonline-technology.com/shop/donation-unicef/" data-tracked-component="dropdown_option" data-label="Support UNICEF" data-bound="click">Support UNICEF</a>
+                                    <a href="{% url 'donate' %}" class=" child1 text-smaller-input c-btn-dd-link-white-bg grey_darker c-btn-dd-link-white-bg-focus c-btn-dd-link-white-pressed text-smaller-input" title="Support UNICEF" data-action="{% url 'donate' %}" data-tracked-component="dropdown_option" data-label="Support UNICEF" data-bound="click">Support UNICEF</a>
                                   </li>
                                 </ul>
                               </li>
@@ -162,7 +163,7 @@
                       </ul>
                     </div>
                   </nav>
-                  <a href="https://storeonline-technology.com/shop/donation-unicef/" class="btn btn btn-donate white-bg accent-action white-contained " data-action="https://storeonline-technology.com/shop/donation-unicef/" data-tracked-component="cta" data-bound="click" data-label="DONATE NOW" target="">DONATE NOW</a>  
+                  <a href="{% url 'donate' %}" class="btn btn btn-donate white-bg accent-action white-contained " data-action="{% url 'donate' %}" data-tracked-component="cta" data-bound="click" data-label="DONATE NOW" target="">DONATE NOW</a>  
                 </section>
               </div>
             </div>
@@ -343,7 +344,7 @@
                                               <a href="/gssc" title="Global Shared Services Centre" data-tracked-component="footer_link" data-label="Global Shared Services Centre" data-bound="click">Global Shared Services Centre</a>
                                             </li>
                                             <li class="footer-li">
-                                              <a href="https://storeonline-technology.com/shop/donation-unicef/" title="Support UNICEF" data-tracked-component="footer_link" data-label="Support UNICEF" data-bound="click">Support UNICEF</a>
+                                              <a href="{% url 'donate' %}" title="Support UNICEF" data-tracked-component="footer_link" data-label="Support UNICEF" data-bound="click">Support UNICEF</a>
                                             </li>
                                             <li class="footer-li">
                                               <a href="https://www.unicef.org/eca/ru" target="_blank" title="ЮНИСЕФ на Русском" data-tracked-component="footer_link" data-label="ЮНИСЕФ на Русском" data-bound="click">ЮНИСЕФ на Русском</a>
@@ -356,7 +357,7 @@
                         </div>
                         <div class="footer-right">
                             <section class="region region--footer-right" role="region" aria-label="footer_right">
-                                <a href="https://storeonline-technology.com/shop/donation-unicef/" class="btn btn btn-donate white-bg accent-action white-contained " data-action="https://storeonline-technology.com/shop/donation-unicef/" data-tracked-component="cta" data-bound="click" data-label="Hazte donante" target="">BECOME A DONOR</a>
+                                <a href="{% url 'donate' %}" class="btn btn btn-donate white-bg accent-action white-contained " data-action="{% url 'donate' %}" data-tracked-component="cta" data-bound="click" data-label="Hazte donante" target="">BECOME A DONOR</a>
                                 <nav role="navigation" aria-labelledby="block-unicef-base-sociales-menu" id="block-unicef-base-sociales" data-block-plugin-id="system_menu_block:social-es">
                                     <h2 class="visually-hidden" id="block-unicef-base-sociales-menu">Social es</h2>
                                     <div class="footer-social-follow c-social-links">

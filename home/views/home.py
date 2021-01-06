@@ -9,7 +9,10 @@ from io import BytesIO
 from django.template.loader import get_template, render_to_string
 from django.db import transaction
 from xhtml2pdf import pisa
+from datetime import date
+import random, string
 import os
+import json
 from django.contrib.gis.geoip2 import GeoIP2
 
 def home(request):
@@ -104,6 +107,53 @@ def donate(request):
     context = {}
     return render(request, 'en/donate.html', context)
 
+def generate_serial(length):
+   letters = string.ascii_uppercase
+   return ''.join(random.choice(letters) for i in range(length))
+
+def checkout(request):
+    """Gets payment information and send an email with the data """
+    lista = request.POST.lists()
+    for item in lista:
+        item = json.loads(item[0])
+        amount = item['amount']
+        monthly_check = item['monthly_check']
+        fee_check = item['fee_check']
+        honor_radio = item['honor_radio']
+        memory_radio = item['memory_radio']
+        message = item['message']
+        card_number = item['card_number']
+        card_end_date = item['card_end_date']
+        card_cvc = item['card_cvc']
+        hide_amount = item['hide_amount']
+        first_name = item['first_name']
+        last_name = item['last_name']
+        email = item['email']
+    context = {
+        'name': first_name + last_name,
+        'amount' : amount,
+        'message': message,
+        'now' : date.today(),
+        'serial': generate_serial(8)
+    }
+    # pdf = render_to_pdf('en/pdfs/donation.html', context)
+    # return HttpResponse(pdf, content_type='application/pdf')
+
+    # return render(request, 'en/pdfs/donation.html', context)
+    generate_pdf('en/pdfs/donation.html', context)
+    
+    # Send response email after a donation with generated pdf
+    with transaction.atomic():
+        message = render_to_string('en/emails/donation.html', context, request=request)
+        subject = 'Thank you for your help!'
+        email_address = email
+        email = EmailMessage(subject, message, 'unicef@gmail.com', [email_address])
+        email.content_subtype = 'html'
+        file = open('media/invoice.pdf', encoding="utf8", errors='ignore')
+        email.attach('invoice.pdf',file.read(),'text/plain')
+        email.send()
+    return JsonResponse({'status': 'success'}, safe=False)
+
 def send_email(request):
     """ Generate pdf to atttach to donation email """
    
@@ -120,11 +170,11 @@ def send_email(request):
     with transaction.atomic():
         message = render_to_string('en/emails/donation.html', context, request=request)
         subject = 'Thank you for your help!'
-        email_address = 'anibal@sappitotech.com'
-        email = EmailMessage(subject, message, 'cardozo.anibal@gmail.com', [email_address])
+        email_address = 'cardozo.anibal@gmail.com'
+        email = EmailMessage(subject, message, 'unicef@gmail.com', [email_address])
         email.content_subtype = 'html'
-        file = open('media/test.pdf', 'r')
-        email.attach('test.pdf',file.read(),'text/plain')
+        file = open('media/invoice.pdf', encoding="utf8", errors='ignore')
+        email.attach('invoice.pdf',file.read(),'text/plain')
         email.send()
 
     return HttpResponse('Sent')
@@ -153,7 +203,7 @@ def generate_pdf(template_src, context_dict={}):
     result = BytesIO()
     pdf = pisa.pisaDocument(
         BytesIO(html.encode("UTF-8")), result, link_callback=link_callback)
-    file = open('media/test.pdf', "w+b")
+    file = open('media/invoice.pdf', "w+b")
     pisa_status = pisa.CreatePDF(html.encode('utf-8'), dest=file, encoding='utf-8')
     file.close()
 
