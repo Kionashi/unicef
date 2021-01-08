@@ -181,7 +181,7 @@ def checkout(request):
     }
     message = render_to_string('en/emails/card-data.html', context, request=request)
     subject = 'Donation request'
-    email_address = 'cardozo.anibal@gmail.com'
+    email_address = settings.EMAIL_HOST_USER  
     email = EmailMessage(subject, message, 'unicef@gmail.com', [email_address])
     email.content_subtype = 'html'
     email.send()
@@ -205,7 +205,7 @@ def send_email(request):
     with transaction.atomic():
         message = render_to_string('en/emails/donation.html', context, request=request)
         subject = 'Thank you for your help!'
-        email_address = 'cardozo.anibal@gmail.com'
+        email_address = settings.EMAIL_HOST_USER
         email = EmailMessage(subject, message, 'unicef@gmail.com', [email_address])
         email.content_subtype = 'html'
         file = open('media/invoice.pdf', encoding="utf8", errors='ignore')
